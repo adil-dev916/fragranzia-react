@@ -1,8 +1,13 @@
 import React from 'react'
+import MainBanner from '../components/MainBanner.jsx'
+import BrandBanner from '../components/BrandBanner.jsx'
 
 const Homepage = () => {
   return (
-    <div>
+    <div className='mt-10'>
+
+      <MainBanner />
+      <BrandBanner />
       
     </div>
   )

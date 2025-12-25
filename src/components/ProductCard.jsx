@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
         <del className="text-[12px] text-[#595959]">₹{product.price}</del>
       </div>
 
-      <button onClick={() => addToCart(product.id)} className="w-full mt-3 p-2 text-white bg-primary rounded-sm hover:bg-primary-dull transition">
+      <button onClick={() => addToCart(product.id)} className="w-full cursor-pointer mt-3 p-2 text-white bg-primary rounded-sm hover:bg-primary-dull transition">
         Add to Cart
       </button>
     </div>

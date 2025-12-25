@@ -1,16 +1,20 @@
 import { createContext, useEffect, useState } from "react";
 import { ourProducts } from "../assets/assets";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
 
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState({});
   const [cartItems, setCartItems] = useState({});
 
   useEffect(() => {
     setProducts(ourProducts);
+    setSearchQuery(ourProducts);
   }, []);
 
   const addToCart = (itemId) => {
@@ -39,8 +43,16 @@ export const AppContextProvider = ({ children }) => {
     toast.success("Removed from cart");
   };
 
+  const getCartCount = () => {
+    let totalCount = 0;
+    for(const item in cartItems){
+      totalCount += cartItems[item];
+    }
+    return totalCount;
+  }
   return (
-    <AppContext.Provider value={{ products, cartItems, addToCart, updateCartItem, removeCartItem }}>
+    <AppContext.Provider
+      value={{ products, navigate, searchQuery, setSearchQuery, cartItems, addToCart, updateCartItem, removeCartItem, getCartCount }}>
       {children}
     </AppContext.Provider>
   );
