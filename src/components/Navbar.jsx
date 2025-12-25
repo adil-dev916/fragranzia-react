@@ -7,10 +7,10 @@ const Navbar = () => {
 
     const [open, setOpen] = React.useState(false)
     const { navigate, searchQuery, setSearchQuery, getCartCount } = useContext(AppContext);
-    
+
 
     useEffect(() => {
-        if(searchQuery.length > 0){
+        if (searchQuery.length > 0) {
             navigate('?products')
         }
     }, [searchQuery])
@@ -42,7 +42,9 @@ const Navbar = () => {
                 <div className='flex gap-2'>
                     <div className="relative cursor-pointer">
                         <div className='flex rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] justify-center items-center'>
-                            <img src={assets.cartIcon} alt="" className='w-4.5 h-4.5' />
+                            <Link to='/cart'>
+                                <img src={assets.cartIcon} alt="" className='w-4.5 h-4.5' />
+                            </Link>
                         </div>
                         <button className="absolute -top-2 -right-1 text-xs text-white bg-primary w-[15px] h-[15px] rounded-full">5</button>
                     </div>
