@@ -7,6 +7,11 @@ import bellIcon from './icons/bellIcon.png'
 import cartIcon from './icons/cartIcon.png'
 import profileIcon from './icons/profileIcon.png'
 import shopNowIcon from './icons/shopNowIcon.png'
+import googleAuthIcon from './icons/googleAuthIcon.png'
+import facebookAuthIcon from './icons/facebookAuthIcon.png'
+import authUserIcon from './icons/authUserIcon.png'
+import authLockIcon from './icons/authLockIcon.png'
+import authEmailIcon from './icons/authEmailIcon.png'
 
 import imageOne from './images/ec25b4b5e08d65f5173c15e1f91cde6f71eb4f06.jpg'
 import imageTwo from './images/9c74020bea95942fe85eb1d5ca6068cd932290d5.jpg'
@@ -26,6 +31,7 @@ import productTTwelve from './products/5a59d0411273b847b8af9755751370ea3f08ac3b.
 import productTThirteen from './products/07abda464afffff33f7d7bd5c5e8f4399c16deb3.png'
 import productTFourteen from './products/99a4784f39f68e5bc0205c10f49c812ed0cf44ba.jpg'
 import productTFifteen from './products/008b0741afb5a356ca961785c67012d75bc3802b.png'
+import productSixteen from './products/eca718a09edd838874403cb7193d84d2765e110f.png'
 
 export const assets = {
     facebookIcon,
@@ -37,6 +43,11 @@ export const assets = {
     cartIcon,
     profileIcon,
     shopNowIcon,
+    googleAuthIcon,
+    facebookAuthIcon,
+    authUserIcon,
+    authLockIcon,
+    authEmailIcon,
     imageOne,
     imageTwo,
     productTTwelve,
@@ -140,9 +151,9 @@ export const ourProducts = [
   {
     id: 'p014',
     title: 'Kyros Eau De Parfum 100ml for Men',
-    price: 980,
-    offerPrice: 879,
-    image: productTThirteen,
+    price: 469,
+    offerPrice: 449,
+    image: productSixteen,
   },
   {
     id: 'p015',

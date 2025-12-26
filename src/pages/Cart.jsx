@@ -20,9 +20,9 @@ const Cart = () => {
   const discount = totalPrice - totalOffer
 
   return (
-    <div className="p-6 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-semibold">Cart</h1>
-      <div className="flex gap-2 text-sm text-gray-500 mt-1">
+    <div className="p-4 md:p-6 max-w-7xl mx-auto">
+      <h1 className="text-2xl md:text-3xl font-semibold">Cart</h1>
+      <div className="flex gap-2 text-xs md:text-sm text-gray-500 mt-1">
         <Link to="/">Home</Link>
         <span>{'>'}</span>
         <span>Cart</span>
@@ -33,24 +33,24 @@ const Cart = () => {
           {cartArray.map(item => {
             const off = Math.round(((item.price - item.offerPrice) / item.price) * 100)
             return (
-              <div key={item.id} className="flex gap-4 shadow-[0_0_3px_#24242453] rounded-lg p-4">
-                <img src={item.image} alt={item.title} className="w-28 h-28 object-contain" />
+              <div key={item.id} className="flex flex-col sm:flex-row gap-4 shadow-[0_0_3px_#24242453] rounded-lg p-4">
+                <img src={item.image} alt={item.title} className="w-24 h-24 sm:w-28 sm:h-28 object-contain mx-auto sm:mx-0" />
                 <div className="flex-1">
-                  <h3 className="font-medium">{item.title}</h3>
+                  <h3 className="font-medium text-sm md:text-base">{item.title}</h3>
                   <div className="flex items-center gap-3 mt-2">
-                    <button onClick={() => updateCartItem(item.id, item.quantity - 1)} className="border px-3">−</button>
+                    <button onClick={() => updateCartItem(item.id, item.quantity - 1)} className="cursor-pointer border px-3">−</button>
                     <span>{item.quantity}</span>
-                    <button onClick={() => updateCartItem(item.id, item.quantity + 1)} className="border px-3">+</button>
+                    <button onClick={() => updateCartItem(item.id, item.quantity + 1)} className="cursor-pointer border px-3">+</button>
                   </div>
-                  <div className="flex items-center gap-3 mt-2">
+                  <div className="flex items-center gap-3 mt-2 text-sm">
                     <p className="font-bold">₹{item.offerPrice}</p>
-                    <del className="text-sm text-gray-400">₹{item.price}</del>
-                    {item.price !== item.offerPrice && <span className="text-green-600 text-sm">{off}% off</span>}
+                    <del className="text-gray-400">₹{item.price}</del>
+                    {item.price !== item.offerPrice && <span className="text-green-600">{off}% off</span>}
                   </div>
-                  <div className="flex gap-3 mt-3">
-                    <button onClick={() => removeCartItem(item.id)} className="border border-red-500 text-red-500 px-4 py-1 rounded">Delete</button>
-                    <button className="border px-4 py-1 rounded">Share</button>
-                    <button className="bg-[#00354B] text-white px-6 py-1 rounded">Buy</button>
+                  <div className="flex flex-wrap gap-3 mt-3">
+                    <button onClick={() => removeCartItem(item.id)} className="cursor-pointer border border-red-500 text-red-500 px-4 py-1 rounded text-sm">Delete</button>
+                    <button className="cursor-pointer border px-4 py-1 rounded text-sm">Share</button>
+                    <button className="cursor-pointer bg-[#00354B] text-white px-6 py-1 rounded text-sm">Buy</button>
                   </div>
                 </div>
               </div>
@@ -79,7 +79,7 @@ const Cart = () => {
               <span>₹{totalOffer}</span>
             </div>
           </div>
-          <button className="w-full bg-[#00354B] text-white py-2 rounded mt-4">Proceed to Buy</button>
+          <button className="cursor-pointer w-full bg-[#00354B] text-white py-2 rounded mt-4">Proceed to Buy</button>
           <p className="text-xs text-gray-500 mt-3 text-center">
             Safe and Secure Payments. Easy returns.100% Authentic products.
           </p>

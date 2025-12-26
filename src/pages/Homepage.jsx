@@ -4,7 +4,7 @@ import BrandBanner from '../components/BrandBanner.jsx'
 
 const Homepage = () => {
   return (
-    <div className='mt-10'>
+    <div className='m-5 py-5'>
 
       <MainBanner />
       <BrandBanner />

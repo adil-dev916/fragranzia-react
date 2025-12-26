@@ -27,6 +27,7 @@ export const AppContextProvider = ({ children }) => {
   };
 
   const updateCartItem = (itemId, quantity) => {
+    if (quantity < 1) return;
     setCartItems(prev => ({
       ...prev,
       [itemId]: quantity,

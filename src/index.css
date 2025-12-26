@@ -22,3 +22,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.loginImgArea {
+  background-image: url(/src/assets/images/9c74020bea95942fe85eb1d5ca6068cd932290d5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -9,10 +9,12 @@ import { Toaster } from 'react-hot-toast'
 import AboutPage from './pages/AboutPage'
 import Footer from './components/Footer'
 import Cart from './pages/Cart'
+import Login from './pages/Login'
 
 const App = () => {
   return (
     <>
+
       <Navbar />
       <Banner />
       <Toaster position="top-center" reverseOrder={false} />
@@ -23,6 +25,7 @@ const App = () => {
           <Route path="/products" element={<ProductPage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       </div>
       <Footer />

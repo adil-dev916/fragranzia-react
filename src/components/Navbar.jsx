@@ -1,13 +1,13 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import { AppContext } from '../context/AppContext'
 
 const Navbar = () => {
 
-    const [open, setOpen] = React.useState(false)
     const { navigate, searchQuery, setSearchQuery, getCartCount } = useContext(AppContext);
-
+    const [open, setOpen] = useState(false)
+    const [profile, setProfile] = useState(false)
 
     useEffect(() => {
         if (searchQuery.length > 0) {
@@ -21,7 +21,6 @@ const Navbar = () => {
             <Link to='/'>
                 <h3 className='text-[#00354B] font-rethink font-bold text-2xl'>Fragranzia</h3>
             </Link>
-
 
             {/* Desktop Menu */}
             <div className="hidden sm:flex items-center gap-8">
@@ -46,13 +45,25 @@ const Navbar = () => {
                                 <img src={assets.cartIcon} alt="" className='w-4.5 h-4.5' />
                             </Link>
                         </div>
-                        <button className="absolute -top-2 -right-1 text-xs text-white bg-primary w-[15px] h-[15px] rounded-full">5</button>
+                        {getCartCount() > 0 && (
+                            <span className="absolute -top-2 -right-1 text-[10px] text-white bg-[#00354B] w-[16px] h-[16px] flex items-center justify-center rounded-full">
+                                {getCartCount()}
+                            </span>
+                        )}
                     </div>
                     <div className='flex rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] justify-center items-center cursor-pointer'>
                         <img src={assets.bellIcon} alt="" className='w-5 h-5' />
                     </div>
-                    <div className='flex rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] justify-center items-center cursor-pointer'>
-                        <img src={assets.profileIcon} alt="" className='w-5 h-5' />
+                    <div className="relative">
+                        <div onClick={() => setProfile(!profile)} className="flex w-[30px] h-[30px] items-center justify-center rounded-full shadow-[0_0_3px_#24242453] cursor-pointer">
+                            <img src={assets.profileIcon} className="w-5 h-5" />
+                        </div>
+                        {profile && (
+                            <div className="absolute right-0 top-9 w-36 bg-white shadow-lg rounded-md text-sm z-50">
+                                <Link to="/profile" className="block px-4 py-2 hover:bg-gray-100">Account</Link>
+                                <Link to="/login" className="block px-4 py-2 hover:bg-gray-100 text-red-500">Logout</Link>
+                            </div>
+                        )}
                     </div>
                 </div>
 
@@ -74,6 +85,7 @@ const Navbar = () => {
             <div className={`${open ? 'flex' : 'hidden'} absolute top-[57px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
                 <Link to='/' className='block'>Home</Link>
                 <Link to='/products' className='block'>Products</Link>
+                <Link to='/cart' className='block'>Cart</Link>
                 <Link to='/gifting' className='block'>Gifting</Link>
                 <Link to='/about' className='block'>About</Link>
                 <button className="cursor-pointer px-6 py-2 mt-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full text-sm">
