@@ -1,6 +1,7 @@
 import React from 'react'
 import MainBanner from '../components/MainBanner.jsx'
 import BrandBanner from '../components/BrandBanner.jsx'
+import FastService from '../components/FastService.jsx'
 
 const Homepage = () => {
   return (
@@ -8,7 +9,8 @@ const Homepage = () => {
 
       <MainBanner />
       <BrandBanner />
-      
+      <FastService />
+
     </div>
   )
 }

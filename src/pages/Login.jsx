@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
@@ -9,7 +10,7 @@ const Login = () => {
           <div className="h-full loginImgArea rounded-[200px_10px_200px_0]">
             <div className="h-full flex flex-col items-center justify-center text-center text-white bg-black/60 rounded-[200px_10px_200px_0] px-14">
               <h1 className="text-4xl font-bold mb-3">Welcome Back</h1>
-              <p className="text-base opacity-90 max-w-md">Glad to see you again! Access your account to explore more</p>
+              <p className="text-base opacity-90 max-w-md">Glad to see you again! Access your <br /> account to explore more</p>
             </div>
           </div>
         </div>
@@ -43,9 +44,11 @@ const Login = () => {
 
           <div className="text-right text-sm mb-6 cursor-pointer">Forgot password?</div>
 
-          <button className="bg-primary text-white py-4 rounded text-lg font-medium hover:opacity-90 transition cursor-pointer">Login</button>
+          <button className="bg-primary text-white py-4 rounded text-lg font-medium hover:opacity-90 transition cursor-pointer">Login In</button>
 
-          <p className="text-center text-base mt-6">Don’t have an account?<span className="font-semibold cursor-pointer ml-1">Sign Up</span></p>
+          <p className="text-center text-base mt-6">Don’t have an account?<Link to="/register" className="font-semibold cursor-pointer ml-1">
+            Sign Up
+          </Link></p>
         </div>
       </div>
     </div>

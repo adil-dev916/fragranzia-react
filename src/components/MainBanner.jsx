@@ -6,7 +6,7 @@ const MainBanner = () => {
     return (
         <>
             {/* className="bg-[linear-gradient(to_bottom,#00354B,#295162,#2C5363)]" */}
-            <div className="mainbannerImg flex flex-col md:flex-row items-center justify-around text-sm border border-gray-200 rounded-2xl m-2  w-full">
+            <div className="mainbannerImg flex flex-col md:flex-row items-center justify-around text-sm border border-gray-200 rounded-2xl w-full">
                 <div className="flex flex-col text-center md:text-left items-center md:items-start pt-14 md:p-10">
                     <h2 className="md:text-4xl text-2xl font-bold text-white">Discover perfumes that<br /> celebrate individuality</h2>
                     <p className='text-white'>Every moment with an unforgettable essence.</p>

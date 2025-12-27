@@ -12,6 +12,11 @@ import facebookAuthIcon from './icons/facebookAuthIcon.png'
 import authUserIcon from './icons/authUserIcon.png'
 import authLockIcon from './icons/authLockIcon.png'
 import authEmailIcon from './icons/authEmailIcon.png'
+import secureIcon from './icons/secureIcon.png'
+import deliveryIcon from './icons/deliveryIcon.png'
+import customerServiceIcon from './icons/customerServiceIcon.png'
+import leftArrowIcon from './icons/leftArrowIcon.png'
+import rightArrowIcon from './icons/rightArrowIcon.png'
 
 import imageOne from './images/ec25b4b5e08d65f5173c15e1f91cde6f71eb4f06.jpg'
 import imageTwo from './images/9c74020bea95942fe85eb1d5ca6068cd932290d5.jpg'
@@ -48,6 +53,11 @@ export const assets = {
     authUserIcon,
     authLockIcon,
     authEmailIcon,
+    secureIcon,
+    deliveryIcon,
+    customerServiceIcon,
+    rightArrowIcon,
+    leftArrowIcon,
     imageOne,
     imageTwo,
     productTTwelve,
