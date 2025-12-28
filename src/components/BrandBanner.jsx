@@ -3,7 +3,7 @@ import { assets } from '../assets/assets'
 
 const BrandBanner = () => {
   return (
-    <div className='flex justify-around gap-8 mt-7'>
+    <div className='flex flex-col md:flex-row justify-around gap-8 mt-7'>
 
       <div className='flex bg-[#E7E7E7] w-full h-36 rounded-2xl p-5 overflow-hidden'>
         <div className='flex flex-col'>
