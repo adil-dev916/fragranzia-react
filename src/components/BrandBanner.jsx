@@ -18,7 +18,7 @@ const BrandBanner = () => {
       <div className='flex flex-col items-center bg-[#E7E7E7] w-full h-36 rounded-2xl overflow-hidden p-5'>
         <p className='font-semibold'>Gift a Scents to your loved one.</p>
         <p>Make your love more beautiful</p>
-        <img src={assets.productTThirteen} alt="" className='w-40 h-40'/>
+        <img src={assets.productTThirteen} alt="" className='w-40 h-40' />
       </div>
 
       <div className='bg-[#E7E7E7] w-full h-36 rounded-2xl overflow-hidden p-5'>
@@ -27,11 +27,11 @@ const BrandBanner = () => {
         </div>
         <div className='flex'>
           <div>
-          <p className='font-semibold'>Luxury Scents Starting at ₹4,000</p>
-        </div>
-        <div>
-          <img src={assets.productTTwelve} alt="" className='rotate-12 w-50 h-50'/>
-        </div>
+            <p className='font-semibold'>Luxury Scents Starting at ₹4,000</p>
+          </div>
+          <div>
+            <img src={assets.productTTwelve} alt="" className='rotate-12 w-50 h-50' />
+          </div>
         </div>
       </div>
     </div>

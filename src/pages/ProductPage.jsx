@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import ProductCard from '../components/ProductCard'
 import { AppContext } from '../context/AppContext'
 import { Link } from 'react-router-dom'
+import { assets } from '../assets/assets'
 
 const ProductPage = () => {
 
@@ -24,16 +25,40 @@ const ProductPage = () => {
     <>
       <div className='m-5 py-5'>
 
-        <div className='ml-9'>
-          <h1 className='text-[35px] font-semibold'>All Products</h1>
+        <div className="ml-4 sm:ml-6 md:ml-9">
+  <h1 className="text-2xl sm:text-3xl md:text-[35px] font-semibold">
+    All Products
+  </h1>
 
-          <div className='flex items-center gap-2 text-sm text-gray-500 font-medium'>
-            <Link to='/'>Home</Link>
-            <span>{'>'}</span>
-            <Link to='/products'>Products</Link>
-          </div>
-        </div>
-        
+  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mt-3">
+    
+    <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 font-medium">
+      <Link to="/">Home</Link>
+      <span>{'>'}</span>
+      <Link to="/products">Products</Link>
+    </div>
+
+    <div className="flex flex-wrap items-center gap-3 text-sm">
+      <p className="hidden sm:block">Sort By:</p>
+
+      <ul className="flex flex-wrap gap-3">
+        <li>Relevance</li>
+        <li>Newest</li>
+        <li>Popularity</li>
+        <li className="hidden md:block">Price--Low to High</li>
+        <li className="hidden md:block">Price--High to Low</li>
+      </ul>
+
+      <button className="flex items-center gap-2 border rounded-full px-3 py-1">
+        Filter
+        <img src={assets.filterIcon} alt="" className="w-4 h-4" />
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6">
           {filteredProducts.map(product => (
             <ProductCard key={product.id} product={product} />

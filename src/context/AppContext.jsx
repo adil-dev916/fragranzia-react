@@ -62,6 +62,12 @@ export const AppContextProvider = ({ children }) => {
     }
     return Math.floor(totalAmount * 100) / 100;
   }
+
+  // all alert => adding to single function
+  const notificationsAll = () => {
+    
+  }
+
   return (
     <AppContext.Provider
       value={{

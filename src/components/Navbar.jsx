@@ -9,11 +9,11 @@ const Navbar = () => {
     const [open, setOpen] = useState(false)
     const [profile, setProfile] = useState(false)
 
-    useEffect(() => {
-        if (searchQuery.length > 0) {
-            navigate('?products')
-        }
-    }, [searchQuery])
+    // useEffect(() => {
+    //     if (searchQuery.length > 0) {
+    //         navigate('?products')
+    //     }
+    // }, [searchQuery])
 
     return (
         <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">

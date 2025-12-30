@@ -17,6 +17,7 @@ import deliveryIcon from './icons/deliveryIcon.png'
 import customerServiceIcon from './icons/customerServiceIcon.png'
 import leftArrowIcon from './icons/leftArrowIcon.png'
 import rightArrowIcon from './icons/rightArrowIcon.png'
+import filterIcon from './icons/filterIcon.png'
 
 import imageOne from './images/ec25b4b5e08d65f5173c15e1f91cde6f71eb4f06.jpg'
 import imageTwo from './images/9c74020bea95942fe85eb1d5ca6068cd932290d5.jpg'
@@ -58,6 +59,7 @@ export const assets = {
     customerServiceIcon,
     rightArrowIcon,
     leftArrowIcon,
+    filterIcon,
     imageOne,
     imageTwo,
     productTTwelve,
@@ -72,6 +74,7 @@ export const ourProducts = [
     title: 'Kyros Eau De Parfum 100ml for Men',
     price: 980,
     offerPrice: 879,
+    category: 'featured',
     image: productOne,
   },
   {
@@ -93,6 +96,7 @@ export const ourProducts = [
     title: 'Kyros Eau De Parfum premium 150ml for Men',
     price: 1499,
     offerPrice: 1249,
+    category: 'featured',
     image: productFour,
   },
   {
@@ -114,6 +118,7 @@ export const ourProducts = [
     title: 'Kyros Eau De Parfum premium 120ml for Women',
     price: 1799,
     offerPrice: 1429,
+    category: 'featured',
     image: productSeven,
   },
   {
@@ -128,6 +133,7 @@ export const ourProducts = [
     title: 'Kyros Eau De Parfum premium 150ml for Men',
     price: 980,
     offerPrice: 879,
+    category: 'featured',
     image: productNine,
   },
   {
@@ -142,6 +148,7 @@ export const ourProducts = [
     title: 'Kyros Eau De Parfum premium 150ml for Men',
     price: 1499,
     offerPrice: 1249,
+    category: 'featured',
     image: productEleven,
   },
   {
