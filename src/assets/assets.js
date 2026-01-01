@@ -39,6 +39,9 @@ import productTFourteen from './products/99a4784f39f68e5bc0205c10f49c812ed0cf44b
 import productTFifteen from './products/008b0741afb5a356ca961785c67012d75bc3802b.png'
 import productSixteen from './products/eca718a09edd838874403cb7193d84d2765e110f.png'
 
+import productViewOne from './products/84ff52be920903cb0f5100ecea6927d9bd38f277.jpg'
+import productViewTwo from './products/79b40f37dc1b4db99f945f4385bcc29fcf76722d.jpg'
+
 export const assets = {
     facebookIcon,
     instagramIcon,
@@ -71,25 +74,25 @@ export const assets = {
 export const ourProducts = [
   {
     id: 'p001',
-    title: 'Kyros Eau De Parfum 100ml for Men',
+    title: 'Kyros Eau De Parfum premium 100ml for Men',
     price: 980,
     offerPrice: 879,
     category: 'featured',
-    image: productOne,
+    image: [productOne]
   },
   {
     id: 'p002',
-    title: 'Kyros Eau De Parfum 100ml for Men',
+    title: 'Aurum Eau De Parfum 100ml for Men',
     price: 980,
     offerPrice: 879,
-    image: productTwo,
+    image: [productTwo]
   },
   {
     id: 'p003',
-    title: 'Kyros Eau De Parfum 100ml for Men',
+    title: 'Facin8 Eau De Parfum 100ml for Men',
     price: 980,
     offerPrice: 879,
-    image: productThree,
+    image: [productThree]
   },
   {
     id: 'p004',
@@ -97,21 +100,21 @@ export const ourProducts = [
     price: 1499,
     offerPrice: 1249,
     category: 'featured',
-    image: productFour,
+    image: [productFour]
   },
   {
     id: 'p005',
-    title: 'Kyros Eau De Parfum 100ml for Men',
+    title: 'Silent Storm Parfum 100ml for All',
     price: 980,
     offerPrice: 879,
-    image: productFive,
+    image: [productFive]
   },
   {
     id: 'p006',
     title: 'Kyros Eau De Parfum 100ml for Men',
     price: 980,
     offerPrice: 879,
-    image: productSix,
+    image: [productSix]
   },
   {
     id: 'p007',
@@ -119,29 +122,29 @@ export const ourProducts = [
     price: 1799,
     offerPrice: 1429,
     category: 'featured',
-    image: productSeven,
+    image: [productSeven]
   },
   {
     id: 'p008',
-    title: 'Kyros Eau De Parfum 100ml for Men',
+    title: 'Song of Oud Parfum 100ml for Men',
     price: 1499,
     offerPrice: 1249,
-    image: productEight,
+    image: [productEight]
   },
   {
     id: 'p009',
-    title: 'Kyros Eau De Parfum premium 150ml for Men',
-    price: 980,
-    offerPrice: 879,
+    title: 'Nereus Eau De Parfum premium 150ml for Men',
+    price: 1119,
+    offerPrice: 979,
     category: 'featured',
-    image: productNine,
+    image: [productNine]
   },
   {
     id: 'p010',
     title: 'Kyros Eau De Parfum 100ml for Men',
     price: 980,
     offerPrice: 879,
-    image: productTen,
+    image: [productTen]
   },
   {
     id: 'p011',
@@ -149,34 +152,34 @@ export const ourProducts = [
     price: 1499,
     offerPrice: 1249,
     category: 'featured',
-    image: productEleven,
+    image: [productEleven]
   },
   {
     id: 'p012',
     title: 'Kyros Eau De Parfum 100ml for Men',
     price: 980,
     offerPrice: 879,
-    image: productTTwelve,
+    image: [productTTwelve]
   },
   {
     id: 'p013',
     title: 'Kyros Eau De Parfum 100ml for Men',
     price: 980,
     offerPrice: 879,
-    image: productTThirteen,
+    image: [productTThirteen]
   },
   {
     id: 'p014',
     title: 'Kyros Eau De Parfum 100ml for Men',
     price: 469,
     offerPrice: 449,
-    image: productSixteen,
+    image: [productSixteen]
   },
   {
     id: 'p015',
     title: 'Kyros Eau De Parfum 100ml for Men',
     price: 980,
     offerPrice: 879,
-    image: productTFifteen,
+    image: [productTFifteen]
   },
 ]

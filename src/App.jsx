@@ -14,7 +14,6 @@ import Login from './pages/Login'
 const App = () => {
   return (
     <>
-
       <Navbar />
       <Banner />
       <Toaster position="top-center" reverseOrder={false} />

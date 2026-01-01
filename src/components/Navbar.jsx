@@ -1,13 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import { AppContext } from '../context/AppContext'
 
 const Navbar = () => {
 
-    const { navigate, searchQuery, setSearchQuery, getCartCount } = useContext(AppContext);
+    const { navigate, user, setUser, setShowUserLogin, searchQuery, setSearchQuery, getCartCount } = useContext(AppContext);
     const [open, setOpen] = useState(false)
     const [profile, setProfile] = useState(false)
+    const logout = async () => {
+        setUser(null);
+        navigate('/')
+    }
 
     // useEffect(() => {
     //     if (searchQuery.length > 0) {
@@ -18,9 +22,9 @@ const Navbar = () => {
     return (
         <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
 
-            <Link to='/'>
+            <NavLink to='/'>
                 <h3 className='text-[#00354B] font-rethink font-bold text-2xl'>Fragranzia</h3>
-            </Link>
+            </NavLink>
 
             {/* Desktop Menu */}
             <div className="hidden sm:flex items-center gap-8">
@@ -61,7 +65,11 @@ const Navbar = () => {
                         {profile && (
                             <div className="absolute right-0 top-9 w-36 bg-white shadow-lg rounded-md text-sm z-50">
                                 <Link to="/profile" className="block px-4 py-2 hover:bg-gray-100">Account</Link>
-                                <Link to="/login" className="block px-4 py-2 hover:bg-gray-100 text-red-500">Logout</Link>
+                                {!user ? (
+                                    <Link to="/login" onClick={() => setShowUserLogin(true)} className="block px-4 py-2 hover:bg-gray-100 text-red-500">Login</Link>
+                                ) : (
+                                    <Link to="/register" className="block px-4 py-2 hover:bg-gray-100 text-red-500">Logout</Link>
+                                )}
                             </div>
                         )}
                     </div>
@@ -82,16 +90,30 @@ const Navbar = () => {
             </button>
 
             {/* Mobile Menu */}
-            <div className={`${open ? 'flex' : 'hidden'} absolute top-[57px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
-                <Link to='/' className='block'>Home</Link>
-                <Link to='/products' className='block'>Products</Link>
-                <Link to='/cart' className='block'>Cart</Link>
-                <Link to='/gifting' className='block'>Gifting</Link>
-                <Link to='/about' className='block'>About</Link>
-                <button className="cursor-pointer px-6 py-2 mt-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full text-sm">
-                    Login
-                </button>
-            </div>
+            {open && (
+                <div className={`${open ? 'flex' : 'hidden'} absolute top-[57px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
+                    <Link to='/' className='block'>Home</Link>
+                    <Link to='/products' className='block'>Products</Link>
+                    {user &&
+                        <Link to='/cart' className='block'>Cart</Link>
+                    }
+                    <Link to='/gifting' className='block'>Gifting</Link>
+                    <Link to='/about' className='block'>About</Link>
+
+                    {!user ? (
+                        <button onClick={() => {
+                            setOpen(false);
+                            setShowUserLogin(true);
+                        }} className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm">
+                            Login
+                        </button>
+                    ) : (
+                        <button className='cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm'>
+                            logout
+                        </button>
+                    )}
+                </div>
+            )}
 
         </nav>
     )

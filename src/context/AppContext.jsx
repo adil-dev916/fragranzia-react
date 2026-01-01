@@ -3,11 +3,13 @@ import { ourProducts } from "../assets/assets";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-export const AppContext = createContext();
+export const AppContext = createContext(); // important
 
 export const AppContextProvider = ({ children }) => {
 
   const navigate = useNavigate();
+  const [user, setUser] = useState(true)
+  const [showUserLogin, setShowUserLogin] = useState(false)
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState({});
   const [cartItems, setCartItems] = useState({});
@@ -71,7 +73,7 @@ export const AppContextProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
-        products, navigate, searchQuery, setSearchQuery,
+        products, navigate, user, setUser, showUserLogin, setShowUserLogin, searchQuery, setSearchQuery,
         cartItems, addToCart, updateCartItem, removeCartItem, getCartCount, getCartAmount
       }}>
       {children}
