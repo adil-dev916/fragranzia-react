@@ -34,7 +34,7 @@ const Cart = () => {
             const off = Math.round(((item.price - item.offerPrice) / item.price) * 100)
             return (
               <div key={item.id} className="flex flex-col sm:flex-row gap-4 shadow-[0_0_3px_#24242453] rounded-lg p-4">
-                <img src={item.image} alt={item.title} className="w-24 h-24 sm:w-28 sm:h-28 object-contain mx-auto sm:mx-0" />
+                <img src={item.image[0]} alt={item.title} className="w-24 h-24 sm:w-28 sm:h-28 object-contain mx-auto sm:mx-0" />
                 <div className="flex-1">
                   <h3 className="font-medium text-sm md:text-base">{item.title}</h3>
                   <div className="flex items-center gap-3 mt-2">

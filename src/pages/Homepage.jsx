@@ -15,7 +15,7 @@ const Homepage = () => {
         <FastService />
 
         <div className='mt-23 flex justify-between items-center'>
-          <h1 className='text-[35px] font-semibold'>Featured<span> Collections</span></h1>
+          <h1 className='sm:text-[20px] md:text-[25px] lg:text-[35px] font-semibold'>Featured<span> Collections</span></h1>
 
           <div className='flex gap-2'>
             <button className='flex justify-center items-center rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] hover:bg-gray-100'>

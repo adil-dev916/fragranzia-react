@@ -1,9 +1,136 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { AppContext } from '../context/AppContext'
+import { Link, useParams } from 'react-router-dom'
+import { assets } from '../assets/assets'
 
 const ProductView = () => {
-  return (
-    <div>
-      
+
+  const { products, navigate, addToCart, updateCartItem, cartItems } = useContext(AppContext)
+  const { id } = useParams()
+  const [relatedProducts, setRelatedProducts] = useState([])
+  const [thumbnail, setThumbnail] = useState(null)
+
+  const product = products.find((item) => item.id === id)
+  const off = Math.round(((product.price - product.offerPrice) / product.price) * 100)
+
+  useEffect(() => {
+    if (products.length > 0) {
+      let productsCopy = products.slice()
+      productsCopy = productsCopy.filter((item) => product.category === item.category)
+      setRelatedProducts(productsCopy.slice(0, 5))
+    }
+  }, [products])
+
+  useEffect(() => {
+    setThumbnail(product?.image[0] ? product.image[0] : null)
+  }, [product])
+
+  return product && (
+    <div className='m-5 py-5'>
+
+      <div className='flex flex-col'>
+        <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 font-medium">
+          <Link to="/">Home</Link>
+          <span>{'>'}</span>
+          <Link to="/products">Products</Link>
+          <span>{'>'}</span>
+          <Link>{product.title}</Link>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-16 mt-4">
+
+          <div className="flex flex-col">
+            <div className="flex gap-3">
+
+              <div className="flex flex-col gap-3">
+                {product.image.map((image, index) => (
+                  <div key={index} onClick={() => setThumbnail(image)} className="border w-24 border-gray-500/30 rounded overflow-hidden cursor-pointer">
+                    <img src={image} alt="" />
+                  </div>
+                ))}
+              </div>
+
+              <div className="border border-gray-500/30 w-[420px] rounded overflow-hidden">
+                <img src={thumbnail} alt="" className="w-full h-full object-cover" />
+              </div>
+
+            </div>
+
+            <div className="flex flex-col gap-3 mt-4 w-full">
+              <button className="w-full bg-primary text-white py-3 rounded-md font-medium hover:bg-primary-dull transition">Purchase Now</button>
+              <button className="w-full border-2 border-primary text-primary py-3 rounded-md font-medium hover:bg-primary hover:text-white transition">Add to Cart</button>
+            </div>
+          </div>
+
+          <div className='text-sm w-full md:w-1/2'>
+
+            <h1 className="text-2xl font-medium">{product.title}</h1>
+            <p>{product.brand}</p>
+
+            <div className='flex items-center'>
+              <p>{product.rating}</p>
+              <img src={assets.ratingIcon} alt="" className='w-4 h-4 ml-2' />
+              <p className='ml-2'>{product.ratingCount} Ratings</p>
+            </div>
+
+            <p className='text-red-500'>Hurry only few stocks left!</p>
+
+            <div className='mt-4 flex items-center gap-3'>
+              <h1 className='text-2xl font-semibold'>₹{product.offerPrice}</h1>
+              <del className="text-[12px] text-[#595959]">₹{product.price}</del>
+              <p className='text-[#3BB94C] font-semibold'>{off}% off</p>
+            </div>
+
+            <div className="flex items-center gap-3 mt-2">
+              <button onClick={() => updateCartItem(product.id, (cartItems[product.id] || 0) - 1)} className="border px-3">−</button>
+              <span>{cartItems[product.id] || 0}</span>
+              <button onClick={() => updateCartItem(product.id, (cartItems[product.id] || 0) + 1)} className="border px-3">+</button>
+            </div>
+
+            <div className='mt-4'>
+              <p className='text-[17px] font-semibold'>Delivery</p>
+              <p>Delivery by 28 Aug, Wednesday | Free if ordered before 9:24 PM</p>
+
+              <div className='mt-4'>
+                <p className='text-[17px] font-semibold'>Description</p>
+                <p>
+                  This fragrance exudes a confident and enigmatic personality.
+                  Its composition features a top note of lemon and mandarin with
+                  a twist of apple that enhances the freshness.
+                </p>
+              </div>
+
+              <div className='mt-4'>
+                <p className='text-[17px] font-semibold'>Available Offers</p>
+
+                <div className='flex items-center gap-2'>
+                  <img src={assets.offerLabelIcon} className='w-3 h-3' />
+                  <p>Buy two of the same product and get a third one free.</p>
+                </div>
+
+                <div className='flex items-center gap-2'>
+                  <img src={assets.offerLabelIcon} className='w-3 h-3' />
+                  <p>Enjoy free standard shipping on orders exceeding ₹1,399.</p>
+                </div>
+
+                <div className='flex items-center gap-2'>
+                  <img src={assets.offerLabelIcon} className='w-3 h-3' />
+                  <p>Get 15% off your first order</p>
+                </div>
+
+                <div className='flex items-center gap-2'>
+                  <img src={assets.offerLabelIcon} className='w-3 h-3' />
+                  <p>Receive a free tool case with the purchase of any perfume over ₹2,000</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
     </div>
   )
 }

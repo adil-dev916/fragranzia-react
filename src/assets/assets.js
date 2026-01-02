@@ -1,3 +1,4 @@
+// All Icons
 import facebookIcon from './icons/facebookIcon.png'
 import instagramIcon from './icons/instagramIcon.png'
 import linkedinIcon from './icons/linkedinIcon.png'
@@ -18,10 +19,16 @@ import customerServiceIcon from './icons/customerServiceIcon.png'
 import leftArrowIcon from './icons/leftArrowIcon.png'
 import rightArrowIcon from './icons/rightArrowIcon.png'
 import filterIcon from './icons/filterIcon.png'
+import shareIcon from './icons/shareIcon.png'
+import wishTrueIcon from './icons/wishTrueIcon.png'
+import wishFalseIcon from './icons/wishFalseIcon.png'
+import ratingIcon from './icons/ratingIcon.png'
+import offerLabelIcon from './icons/offerLabelIcon.png'
 
 import imageOne from './images/ec25b4b5e08d65f5173c15e1f91cde6f71eb4f06.jpg'
 import imageTwo from './images/9c74020bea95942fe85eb1d5ca6068cd932290d5.jpg'
 
+// All Products
 import productOne from './products/37dcb4eb242b0abd5729f79a8ed1bd6e8d1fa0e6.png'
 import productTwo from './products/db814c4ab5fa981813151d5f7feb813108479799.png'
 import productThree from './products/4b98715dae7c344c65a0842e7a031d6561f369f7.png'
@@ -41,6 +48,16 @@ import productSixteen from './products/eca718a09edd838874403cb7193d84d2765e110f.
 
 import productViewOne from './products/84ff52be920903cb0f5100ecea6927d9bd38f277.jpg'
 import productViewTwo from './products/79b40f37dc1b4db99f945f4385bcc29fcf76722d.jpg'
+import nereusViewOne from './products/nereusViewOne.webp'
+import nereusViewTwo from './products/nereusViewTwo.webp'
+import kyrosViewOne from './products/kyrosViewOne.webp'
+import kyrosViewTwo from './products/kyrosViewTwo.webp'
+import royalViewOne from './products/royalViewOne.webp'
+import royalViewTwo from './products/royalViewTwo.webp'
+import silentstormViewOne from './products/silentstormViewOne.webp'
+import silentstormViewTwo from './products/silentstormViewTwo.webp'
+import aurumViewOne from './products/aurumViewOne.webp'
+import aurumViewTwo from './products/aurumViewTwo.webp'
 
 export const assets = {
     facebookIcon,
@@ -63,6 +80,11 @@ export const assets = {
     rightArrowIcon,
     leftArrowIcon,
     filterIcon,
+    shareIcon,
+    wishTrueIcon,
+    wishFalseIcon,
+    ratingIcon,
+    offerLabelIcon,
     imageOne,
     imageTwo,
     productTTwelve,
@@ -74,18 +96,21 @@ export const assets = {
 export const ourProducts = [
   {
     id: 'p001',
-    title: 'Kyros Eau De Parfum premium 100ml for Men',
+    title: 'Autograph eau de parfum 100ml for men',
     price: 980,
     offerPrice: 879,
     category: 'featured',
-    image: [productOne]
+    brand: 'Autograph',
+    rating : 4.5,
+    ratingCount: 1000,
+    image: [productOne, productViewOne, productViewTwo],
   },
   {
     id: 'p002',
-    title: 'Aurum Eau De Parfum 100ml for Men',
-    price: 980,
-    offerPrice: 879,
-    image: [productTwo]
+    title: 'Aurum Non-Alcoholic Attar 10ML for Women',
+    price: 975,
+    offerPrice: 780,
+    image: [productTwo, aurumViewOne, aurumViewTwo]
   },
   {
     id: 'p003',
@@ -104,10 +129,10 @@ export const ourProducts = [
   },
   {
     id: 'p005',
-    title: 'Silent Storm Parfum 100ml for All',
-    price: 980,
-    offerPrice: 879,
-    image: [productFive]
+    title: 'Silent Storm Parfum 100ml for Men',
+    price: 2200,
+    offerPrice: 1100,
+    image: [productFive, silentstormViewOne, silentstormViewTwo]
   },
   {
     id: 'p006',
@@ -118,11 +143,11 @@ export const ourProducts = [
   },
   {
     id: 'p007',
-    title: 'Kyros Eau De Parfum premium 120ml for Women',
-    price: 1799,
-    offerPrice: 1429,
+    title: 'Royal Oud Kuwaiti Non-Alcoholic Attar 10ML for Unisex',
+    price: 1299,
+    offerPrice: 999,
     category: 'featured',
-    image: [productSeven]
+    image: [productSeven, royalViewOne, royalViewTwo]
   },
   {
     id: 'p008',
@@ -137,7 +162,7 @@ export const ourProducts = [
     price: 1119,
     offerPrice: 979,
     category: 'featured',
-    image: [productNine]
+    image: [productNine, nereusViewOne, nereusViewTwo]
   },
   {
     id: 'p010',
@@ -152,7 +177,7 @@ export const ourProducts = [
     price: 1499,
     offerPrice: 1249,
     category: 'featured',
-    image: [productEleven]
+    image: [productEleven, kyrosViewOne, kyrosViewTwo]
   },
   {
     id: 'p012',

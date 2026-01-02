@@ -3,12 +3,12 @@ import { AppContext } from '../context/AppContext'
 
 const ProductCard = ({ product }) => {
 
-  const { addToCart } = useContext(AppContext)
+  const { addToCart, navigate } = useContext(AppContext)
 
-  return (
+  return product && (
     <div className="w-[220px] p-3">
-      <div className="flex justify-center items-center w-full h-[200px] shadow-[0_0_3px_1px_#24242453] rounded-[24px_0_24px_0] transition-all duration-300 ease-linear hover:rounded-[0_24px_0_24px]">
-        <img src={product.image} alt={product.title} className="w-[160px] h-[160px] object-contain" />
+      <div onClick={() => {navigate(`/products/${product.id}`); scrollTo(0,0)}} className="flex justify-center items-center w-full h-[200px] shadow-[0_0_3px_1px_#24242453] rounded-[24px_0_24px_0] transition-all duration-300 ease-linear hover:rounded-[0_24px_0_24px]">
+        <img src={product.image[0]} alt={product.title} className="w-[160px] h-[160px] object-contain" />
       </div>
 
       <div className="mt-2">
