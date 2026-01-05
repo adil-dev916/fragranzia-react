@@ -57,8 +57,8 @@ const ProductView = () => {
             </div>
 
             <div className="flex flex-col gap-3 mt-4 w-full">
-              <button className="w-full bg-primary text-white py-3 rounded-md font-medium hover:bg-primary-dull transition">Purchase Now</button>
-              <button className="w-full border-2 border-primary text-primary py-3 rounded-md font-medium hover:bg-primary hover:text-white transition">Add to Cart</button>
+              <button className="w-full bg-primary text-white py-3 rounded-md font-medium hover:bg-primary-dull transition"><Link to='/payment'>Purchase Now</Link></button>
+              <button onClick={() => addToCart(product.id)} className="w-full border-2 border-primary text-primary py-3 rounded-md font-medium hover:bg-primary hover:text-white transition">Add to Cart</button>
             </div>
           </div>
 
@@ -103,7 +103,7 @@ const ProductView = () => {
               <div className='mt-4'>
                 <p className='text-[17px] font-semibold'>Available Offers</p>
 
-                <div className='flex items-center gap-2'>
+                <div className='mt-2 flex items-center gap-2'>
                   <img src={assets.offerLabelIcon} className='w-3 h-3' />
                   <p>Buy two of the same product and get a third one free.</p>
                 </div>
@@ -128,6 +128,19 @@ const ProductView = () => {
 
           </div>
 
+        </div>
+      </div>
+
+      <div className='mt-23 flex justify-between items-center'>
+        <h1 className='sm:text-[20px] md:text-[25px] lg:text-[35px] font-semibold'>Suggested<span> for you</span></h1>
+
+        <div className='flex gap-2'>
+          <button className='flex justify-center items-center rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] hover:bg-gray-100'>
+            <img src={assets.leftArrowIcon} alt="" className='w-5 h-5' />
+          </button>
+          <button className='flex justify-center items-center rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] hover:bg-gray-100'>
+            <img src={assets.rightArrowIcon} alt="" className='w-5 h-5' />
+          </button>
         </div>
       </div>
 

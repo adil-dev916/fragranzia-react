@@ -46,6 +46,7 @@ import productTFourteen from './products/99a4784f39f68e5bc0205c10f49c812ed0cf44b
 import productTFifteen from './products/008b0741afb5a356ca961785c67012d75bc3802b.png'
 import productSixteen from './products/eca718a09edd838874403cb7193d84d2765e110f.png'
 
+// product view
 import productViewOne from './products/84ff52be920903cb0f5100ecea6927d9bd38f277.jpg'
 import productViewTwo from './products/79b40f37dc1b4db99f945f4385bcc29fcf76722d.jpg'
 import nereusViewOne from './products/nereusViewOne.webp'
@@ -58,6 +59,10 @@ import silentstormViewOne from './products/silentstormViewOne.webp'
 import silentstormViewTwo from './products/silentstormViewTwo.webp'
 import aurumViewOne from './products/aurumViewOne.webp'
 import aurumViewTwo from './products/aurumViewTwo.webp'
+import oudofdubaiViewOne from './products/oudofdubaiViewOne.jpg'
+import oudofdubaiViewTwo from './products/oudofdubaiViewTwo.jpg'
+import songofoudViewOne from './products/songofoudViewOne.webp'
+import songofoudViewTwo from './products/songofoudViewTwo.webp'
 
 export const assets = {
     facebookIcon,
@@ -121,11 +126,11 @@ export const ourProducts = [
   },
   {
     id: 'p004',
-    title: 'Kyros Eau De Parfum premium 150ml for Men',
-    price: 1499,
-    offerPrice: 1249,
+    title: 'Ajmal Oud of Dubai Perfume for Men',
+    price: 1099,
+    offerPrice: 899,
     category: 'featured',
-    image: [productFour]
+    image: [productFour, oudofdubaiViewOne, oudofdubaiViewTwo]
   },
   {
     id: 'p005',
@@ -151,16 +156,16 @@ export const ourProducts = [
   },
   {
     id: 'p008',
-    title: 'Song of Oud Parfum 100ml for Men',
-    price: 1499,
-    offerPrice: 1249,
-    image: [productEight]
+    title: 'Song of Oud Parfum 75ML for Men & Women',
+    price: 9999,
+    offerPrice: 7999,
+    image: [productEight, songofoudViewOne, songofoudViewTwo]
   },
   {
     id: 'p009',
     title: 'Nereus Eau De Parfum premium 150ml for Men',
-    price: 1119,
-    offerPrice: 979,
+    price: 1099,
+    offerPrice: 899,
     category: 'featured',
     image: [productNine, nereusViewOne, nereusViewTwo]
   },

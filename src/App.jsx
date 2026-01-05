@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import Cart from './pages/Cart'
 import Login from './pages/Login'
 import ProductView from './pages/ProductView'
+import PaymentPage from './pages/PaymentPage'
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path='/products/:id' element={<ProductView/>} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/payment' element={<PaymentPage />} />
           <Route path='/login' element={<Login />} />
         </Routes>
       </div>

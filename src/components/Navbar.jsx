@@ -74,10 +74,6 @@ const Navbar = () => {
                         )}
                     </div>
                 </div>
-
-                {/* <button className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
-                    Login
-                </button> */}
             </div>
 
             <button onClick={() => open ? setOpen(false) : setOpen(true)} aria-label="Menu" className="sm:hidden">

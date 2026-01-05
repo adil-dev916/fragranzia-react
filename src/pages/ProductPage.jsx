@@ -21,6 +21,19 @@ const ProductPage = () => {
     }
   }, [products, searchQuery])
 
+  const sortHighToLow = () => {
+    const sorted = [...filteredProducts].sort(
+      (a, b) => b.offerPrice - a.offerPrice
+    )
+    setFilteredProducts(sorted)
+  }
+  const sortLowToHigh = () => {
+    const sorted = [...filteredProducts].sort(
+      (a, b) => a.offerPrice - b.offerPrice
+    )
+    setFilteredProducts(sorted)
+  }
+
   return (
     <>
       <div className='m-5 py-5'>
@@ -45,8 +58,8 @@ const ProductPage = () => {
                 <li>Relevance</li>
                 <li>Newest</li>
                 <li>Popularity</li>
-                <li className="hidden md:block">Price--Low to High</li>
-                <li className="hidden md:block">Price--High to Low</li>
+                <li className="hidden md:block" onClick={sortLowToHigh}>Price--Low to High</li>
+                <li className="hidden md:block" onClick={sortHighToLow}>Price--High to Low</li>
               </ul>
 
               <button className="flex items-center gap-2 border rounded-full px-3 py-1">
