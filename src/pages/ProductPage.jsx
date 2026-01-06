@@ -54,7 +54,7 @@ const ProductPage = () => {
             <div className="flex flex-wrap items-center gap-3 text-sm">
               <p className="hidden sm:block">Sort By:</p>
 
-              <ul className="flex flex-wrap gap-3">
+              <ul className="flex flex-wrap gap-3 cursor-pointer">
                 <li>Relevance</li>
                 <li>Newest</li>
                 <li>Popularity</li>

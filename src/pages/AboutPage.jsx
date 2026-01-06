@@ -34,8 +34,8 @@ const AboutPage = () => {
                     </div>
 
                     <div className="flex flex-col gap-4 items-center lg:items-end">
-                        <img src={assets.imageTwo} alt="" className="w-full max-w-[248px] sm:max-w-[248px] lg:max-w-[248px] h-44 sm:h-44 lg:h-44 object-cover rounded-[24px_0_24px_0]"/>
-                        <img src={assets.imageOne} alt="" className="w-full max-w-[248px] sm:max-w-[248px] lg:max-w-[248px] h-44 sm:h-44 lg:h-44 object-cover rounded-[0_24px_0_24px]"/>
+                        <img src={assets.imageTwo} alt="" className="w-full max-w-[248px] sm:max-w-[248px] lg:max-w-[248px] h-44 sm:h-44 lg:h-44 object-cover rounded-[24px_0_24px_0]" />
+                        <img src={assets.imageOne} alt="" className="w-full max-w-[248px] sm:max-w-[248px] lg:max-w-[248px] h-44 sm:h-44 lg:h-44 object-cover rounded-[0_24px_0_24px]" />
                     </div>
 
                 </div>

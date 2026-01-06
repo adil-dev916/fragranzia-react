@@ -57,7 +57,9 @@ const ProductView = () => {
             </div>
 
             <div className="flex flex-col gap-3 mt-4 w-full">
-              <button className="w-full bg-primary text-white py-3 rounded-md font-medium hover:bg-primary-dull transition"><Link to='/payment'>Purchase Now</Link></button>
+
+              <button onClick={() => { navigate(`/products/quick/${product.id}`) }} className="w-full bg-primary text-white py-3 rounded-md font-medium hover:bg-primary-dull transition">Purchase Now</button>
+
               <button onClick={() => addToCart(product.id)} className="w-full border-2 border-primary text-primary py-3 rounded-md font-medium hover:bg-primary hover:text-white transition">Add to Cart</button>
             </div>
           </div>
