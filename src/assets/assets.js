@@ -96,6 +96,7 @@ export const assets = {
     productTThirteen,
     productTFourteen,
     productTFifteen,
+    productSixteen,
 }
 
 export const ourProducts = [
@@ -115,6 +116,9 @@ export const ourProducts = [
     title: 'Aurum Non-Alcoholic Attar 10ML for Women',
     price: 975,
     offerPrice: 780,
+    brand: 'Aurum',
+    rating : 5,
+    ratingCount: 789,
     image: [productTwo, aurumViewOne, aurumViewTwo]
   },
   {
@@ -122,6 +126,9 @@ export const ourProducts = [
     title: 'Facin8 Eau De Parfum 100ml for Men',
     price: 980,
     offerPrice: 879,
+    brand: 'Facin8',
+    rating : 3.9,
+    ratingCount: 655,
     image: [productThree]
   },
   {
@@ -130,6 +137,9 @@ export const ourProducts = [
     price: 1099,
     offerPrice: 899,
     category: 'featured',
+    brand: 'Ajmal Oud',
+    rating : 5,
+    ratingCount: 1213,
     image: [productFour, oudofdubaiViewOne, oudofdubaiViewTwo]
   },
   {
@@ -137,6 +147,9 @@ export const ourProducts = [
     title: 'Silent Storm Parfum 100ml for Men',
     price: 2200,
     offerPrice: 1100,
+    brand: 'Silent Storm',
+    rating : 5,
+    ratingCount: 4720,
     image: [productFive, silentstormViewOne, silentstormViewTwo]
   },
   {
@@ -152,6 +165,9 @@ export const ourProducts = [
     price: 1299,
     offerPrice: 999,
     category: 'featured',
+    brand: 'Royal',
+    rating : 4.4,
+    ratingCount: 476,
     image: [productSeven, royalViewOne, royalViewTwo]
   },
   {
@@ -159,6 +175,9 @@ export const ourProducts = [
     title: 'Song of Oud Parfum 75ML for Men & Women',
     price: 9999,
     offerPrice: 7999,
+    brand: 'Song',
+    rating : 5,
+    ratingCount: 55,
     image: [productEight, songofoudViewOne, songofoudViewTwo]
   },
   {
@@ -167,6 +186,9 @@ export const ourProducts = [
     price: 1099,
     offerPrice: 899,
     category: 'featured',
+    brand: 'Nereus',
+    rating : 4.3,
+    ratingCount: 852,
     image: [productNine, nereusViewOne, nereusViewTwo]
   },
   {
@@ -182,6 +204,9 @@ export const ourProducts = [
     price: 1499,
     offerPrice: 1249,
     category: 'featured',
+    brand: 'Kyros',
+    rating : 4.8,
+    ratingCount: 911,
     image: [productEleven, kyrosViewOne, kyrosViewTwo]
   },
   {

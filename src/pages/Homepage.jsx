@@ -30,6 +30,12 @@ const Homepage = () => {
         </div>
         {/* <FeaturedCard /> */}
 
+        <div className='flex justify-center items-center mt-4 text-center lg:text-2xl md:text-[20px] sm:text-sm'>
+          <div className='max-w-md px-4'>
+            <p>"It's an art. A craft. A science. At Fragranzia, we're in the business of creating memories that last forever through our fragrances."</p>
+          </div>
+        </div>
+
       </div>
     </>
   )

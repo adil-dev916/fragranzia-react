@@ -44,7 +44,7 @@ const Login = () => {
 
           <div className="text-right text-sm mb-6 cursor-pointer">Forgot password?</div>
 
-          <button className="bg-primary text-white py-4 rounded text-lg font-medium hover:opacity-90 transition cursor-pointer">Login In</button>
+          <button className="bg-primary text-white py-4 rounded text-lg font-medium hover:opacity-90 transition cursor-pointer">Log In</button>
 
           <p className="text-center text-base mt-6">Don’t have an account?<Link to="/register" className="font-semibold cursor-pointer ml-1">
             Sign Up

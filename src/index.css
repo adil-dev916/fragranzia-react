@@ -18,7 +18,13 @@
 }
 
 .mainbannerImg {
-  background-image: linear-gradient(to bottom, #00354bcc, #295162cc, #2C5363cc), url(/src/assets/images/bab3135c7f2ed8a335cb9a00ac3c00ef33704e89.png);
+  background-image: linear-gradient(to bottom, #013146d6, #02425dcc, #0e3747cc), url(/src/assets/images/bab3135c7f2ed8a335cb9a00ac3c00ef33704e89.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mainSecbannerImg {
+  background-image: linear-gradient(to bottom, #C37400cc, #BE8736cc), url(/src/assets/images/bab3135c7f2ed8a335cb9a00ac3c00ef33704e89.png);
   background-repeat: no-repeat;
   background-size: cover;
 }

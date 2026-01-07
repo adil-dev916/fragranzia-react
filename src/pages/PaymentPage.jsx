@@ -31,7 +31,7 @@ const PaymentPage = () => {
                         </div>
                         <div className="flex items-center gap-3 mt-2 text-sm">
                             <p className="font-bold">₹{product.offerPrice}</p>
-                            <del>₹{product.price}</del>
+                            <del className='text-[#595959]'>₹{product.price}</del>
                             <span className="text-green-600">{off}% off</span>
                         </div>
                         <div className='flex flex-col text-[13px]'>

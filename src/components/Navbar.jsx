@@ -63,12 +63,14 @@ const Navbar = () => {
                             <img src={assets.profileIcon} className="w-5 h-5" />
                         </div>
                         {profile && (
-                            <div className="absolute right-0 top-9 w-36 bg-white shadow-lg rounded-md text-sm z-50">
-                                <Link to="/profile" className="block px-4 py-2 hover:bg-gray-100">Account</Link>
+                            <div className="absolute right-0 top-9 w-36 bg-white shadow-lg text-sm z-50">
                                 {!user ? (
-                                    <Link to="/login" onClick={() => setShowUserLogin(true)} className="block px-4 py-2 hover:bg-gray-100 text-red-500">Login</Link>
+                                    <>
+                                        <Link to="/profile" className="block px-4 py-2 hover:bg-gray-100">Profile</Link>
+                                        <Link to="/register" className="block px-4 py-2 hover:bg-gray-100 text-red-500">Logout</Link>
+                                    </>
                                 ) : (
-                                    <Link to="/register" className="block px-4 py-2 hover:bg-gray-100 text-red-500">Logout</Link>
+                                    <Link to="/login" onClick={() => setShowUserLogin(true)} className="block px-4 py-2 hover:bg-gray-100 text-red-500">Login</Link>
                                 )}
                             </div>
                         )}
