@@ -8,7 +8,7 @@ export const AppContext = createContext(); // important
 export const AppContextProvider = ({ children }) => {
 
   const navigate = useNavigate();
-  const [user, setUser] = useState(true)
+  const [user, setUser] = useState(false)
   const [showUserLogin, setShowUserLogin] = useState(false)
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState({});
@@ -48,8 +48,8 @@ export const AppContextProvider = ({ children }) => {
 
   const getCartCount = () => {
     let totalCount = 0;
-    for (const item in cartItems) {
-      totalCount += cartItems[item];
+    for (const productId  in cartItems) {
+      totalCount += cartItems[productId ];
     }
     return totalCount;
   }
@@ -67,7 +67,7 @@ export const AppContextProvider = ({ children }) => {
 
   // all alert => adding to single function
   const notificationsAll = () => {
-    
+
   }
 
   return (

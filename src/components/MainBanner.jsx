@@ -12,16 +12,14 @@ const MainBanner = () => {
 
                     <div className="flex items-center gap-4 mt-6">
                         <Link to='/products'>
-                            <button type="button" aria-label="getStarted" className="bg-white cursor-pointer text-black hover:bg-white/70 px-7 py-2.5  rounded-md active:scale-95 transition-all">
-                                Shop Now
-                            </button>
+                            <button type="button" aria-label="getStarted" className="bg-white cursor-pointer text-black hover:bg-white/70 px-7 py-2.5  rounded-md active:scale-95 transition-all">Shop Now</button>
                         </Link>
                     </div>
                 </div>
 
                 <div className="relative flex justify-center items-center mt-6 md:mt-0">
                     <img src={assets.productSixteen} alt="spray" className="w-[220px] sm:w-[260px] md:w-[320px] -rotate-[12deg]" />
-                    <img src={assets.productSixteen} alt="spray" className="absolute w-[180px] sm:w-[220px] md:w-[260px] rotate-[18deg] z-10 top-10 sm:top-12 md:top-14 left-4/5 -translate-x-1/2" />
+                    <img src={assets.productSixteen} alt="spray" className="absolute w-[180px] sm:w-[220px] md:w-[250px] rotate-[18deg] z-10 top-10 sm:top-12 md:top-14 left-4/5 -translate-x-1/2" />
                 </div>
 
             </div>

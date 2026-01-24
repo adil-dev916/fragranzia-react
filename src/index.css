@@ -42,3 +42,67 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.mainthreecard {
+  display: flex;
+  gap: 10px;
+  height: 400px;
+}
+
+.mainthreecard-box {
+  flex: 1;
+  transition: all 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 6px;
+}
+
+.bg-one {
+  background-image: linear-gradient(to right, #020608ce, #041b2554), url(/src//assets//images/9a95452ac3a33a3c661ab148aa613e68717d0300.jpg);
+}
+
+.bg-two {
+  background-image: linear-gradient(to right, #020608ce, #041b2554), url(/src//assets//images/ec25b4b5e08d65f5173c15e1f91cde6f71eb4f06.jpg);
+}
+
+.bg-three {
+  background-image: linear-gradient(to right, #020608ce, #041b2554), url(/src//assets//images/345da007b677d098e336f1e606865c1d044da12d.jpg);
+}
+
+.mainthreecard-box.active {
+  flex: 2;
+}
+
+.mainthreecard:hover .mainthreecard-box {
+  flex: 1;
+}
+
+.mainthreecard .mainthreecard-box:hover {
+  flex: 2;
+}
+
+@media (max-width: 768px) {
+  .mainthreecard {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .mainthreecard-box {
+    flex: none;
+    height: 160px;
+  }
+
+  .mainthreecard:hover .mainthreecard-box {
+    flex: none;
+  }
+
+  .mainthreecard .mainthreecard-box:hover {
+    flex: none;
+  }
+}

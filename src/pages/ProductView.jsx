@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../context/AppContext'
 import { Link, useParams } from 'react-router-dom'
 import { assets } from '../assets/assets'
+import ProductCard from '../components/ProductCard'
 
 const ProductView = () => {
 
@@ -133,17 +134,28 @@ const ProductView = () => {
         </div>
       </div>
 
-      <div className='mt-23 flex justify-between items-center'>
-        <h1 className='sm:text-[20px] md:text-[25px] lg:text-[35px] font-semibold'>Suggested<span> for you</span></h1>
-
-        <div className='flex gap-2'>
-          <button className='flex justify-center items-center rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] hover:bg-gray-100'>
-            <img src={assets.leftArrowIcon} alt="" className='w-5 h-5' />
-          </button>
-          <button className='flex justify-center items-center rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] hover:bg-gray-100'>
-            <img src={assets.rightArrowIcon} alt="" className='w-5 h-5' />
-          </button>
+      <div className='mt-23'>
+        <div>
+          <div className='flex justify-between'>
+            <h1 className='sm:text-[20px] md:text-[25px] lg:text-[35px] font-semibold'>Suggested<span> for you</span></h1>
+            <div className='flex gap-2'>
+              <button className='flex justify-center items-center rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] hover:bg-gray-100'>
+                <img src={assets.leftArrowIcon} alt="" className='w-5 h-5' />
+              </button>
+              <button className='flex justify-center items-center rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] hover:bg-gray-100'>
+                <img src={assets.rightArrowIcon} alt="" className='w-5 h-5' />
+              </button>
+            </div>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6'>
+            {
+              relatedProducts.map((product, index) => (
+                <ProductCard key={index} product={product} />
+              ))
+            }
+          </div>
         </div>
+
       </div>
 
     </div>

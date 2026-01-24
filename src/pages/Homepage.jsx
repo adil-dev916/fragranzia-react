@@ -4,6 +4,7 @@ import BrandBanner from '../components/BrandBanner.jsx'
 import FastService from '../components/FastService.jsx'
 import { assets } from '../assets/assets.js'
 import FeaturedCard from '../components/FeaturedCard.jsx'
+import Navbar from '../components/Navbar.jsx'
 
 const Homepage = () => {
   return (
@@ -25,14 +26,54 @@ const Homepage = () => {
               <img src={assets.rightArrowIcon} alt="" className='w-5 h-5' />
             </button>
           </div>
-
-
         </div>
         {/* <FeaturedCard /> */}
 
         <div className='flex justify-center items-center mt-4 text-center lg:text-2xl md:text-[20px] sm:text-sm'>
           <div className='max-w-md px-4'>
             <p>"It's an art. A craft. A science. At Fragranzia, we're in the business of creating memories that last forever through our fragrances."</p>
+          </div>
+        </div>
+
+        {/* 3 cards */}
+        <div className="mainthreecard md:text-2xl md:font-medium lg:text-3xl lg:font-bold mt-22">
+          <div className="mainthreecard-box bg-one active">
+            <p className='rotate-270'>New Arrivals</p>
+          </div>
+          <div className="mainthreecard-box bg-two flex">
+            <p className='rotate-270'>Limited Edition</p>
+          </div>
+          <div className="mainthreecard-box bg-three">
+            <p className='rotate-270'>Best Sellers</p>
+          </div>
+        </div>
+
+        <div className='mt-23 flex justify-between items-center'>
+          <h1 className='sm:text-[20px] md:text-[25px] lg:text-[35px] font-semibold'>Explore<span> Categories</span></h1>
+
+          <div className='flex gap-2'>
+            <p className='text-decoration-line: underline'>See All</p>
+          </div>
+        </div>
+
+        <div className='mt-9 flex justify-between'>
+          <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+            <img src={assets.productTwo} alt="" className='w-30 h-30'/>
+          </div>
+          <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+            <img src={assets.productThree} alt="" className='w-30 h-30'/>
+          </div>
+          <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+            <img src={assets.productFour} alt="" className='w-30 h-30'/>
+          </div>
+          <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+            <img src={assets.productFive} alt="" className='w-30 h-30'/>
+          </div>
+          <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+            <img src={assets.productSix} alt="" className='w-30 h-30'/>
+          </div>
+          <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+            <img src={assets.productSixteen} alt="" className='w-30 h-30'/>
           </div>
         </div>
 

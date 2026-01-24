@@ -24,9 +24,12 @@ import wishTrueIcon from './icons/wishTrueIcon.png'
 import wishFalseIcon from './icons/wishFalseIcon.png'
 import ratingIcon from './icons/ratingIcon.png'
 import offerLabelIcon from './icons/offerLabelIcon.png'
+import editIcon from './icons/editIcon.png'
 
 import imageOne from './images/ec25b4b5e08d65f5173c15e1f91cde6f71eb4f06.jpg'
 import imageTwo from './images/9c74020bea95942fe85eb1d5ca6068cd932290d5.jpg'
+import imageThree from './images/9a95452ac3a33a3c661ab148aa613e68717d0300.jpg'
+import imageFour from './images/345da007b677d098e336f1e606865c1d044da12d.jpg'
 
 // All Products
 import productOne from './products/37dcb4eb242b0abd5729f79a8ed1bd6e8d1fa0e6.png'
@@ -45,6 +48,9 @@ import productTThirteen from './products/07abda464afffff33f7d7bd5c5e8f4399c16deb
 import productTFourteen from './products/99a4784f39f68e5bc0205c10f49c812ed0cf44ba.jpg'
 import productTFifteen from './products/008b0741afb5a356ca961785c67012d75bc3802b.png'
 import productSixteen from './products/eca718a09edd838874403cb7193d84d2765e110f.png'
+import productSevenTeen from './products/productSevenTeen.webp'
+import productEightTeen from './products/productEightTeen.webp'
+import productNineTeen from './products/productNineTeen.webp'
 
 // product view
 import productViewOne from './products/84ff52be920903cb0f5100ecea6927d9bd38f277.jpg'
@@ -59,10 +65,16 @@ import silentstormViewOne from './products/silentstormViewOne.webp'
 import silentstormViewTwo from './products/silentstormViewTwo.webp'
 import aurumViewOne from './products/aurumViewOne.webp'
 import aurumViewTwo from './products/aurumViewTwo.webp'
+import aurumViewThree from './products/aurumViewThree.webp'
+import aurumViewFour from './products/aurumViewFour.webp'
 import oudofdubaiViewOne from './products/oudofdubaiViewOne.jpg'
 import oudofdubaiViewTwo from './products/oudofdubaiViewTwo.jpg'
 import songofoudViewOne from './products/songofoudViewOne.webp'
 import songofoudViewTwo from './products/songofoudViewTwo.webp'
+import ahlamViewOne from './products/ahlamViewOne.webp'
+import ahlamViewTwo from './products/ahlamViewTwo.webp'
+import patchViewOne from './products/patchViewOne.webp'
+import patchViewTwo from './products/patchViewTwo.webp'
 
 export const assets = {
     facebookIcon,
@@ -90,8 +102,16 @@ export const assets = {
     wishFalseIcon,
     ratingIcon,
     offerLabelIcon,
+    editIcon,
     imageOne,
     imageTwo,
+    imageThree,
+    imageFour,
+    productTwo,
+    productThree,
+    productFour,
+    productFive,
+    productSix,
     productTTwelve,
     productTThirteen,
     productTFourteen,
@@ -116,6 +136,7 @@ export const ourProducts = [
     title: 'Aurum Non-Alcoholic Attar 10ML for Women',
     price: 975,
     offerPrice: 780,
+    category: 'concentrated',
     brand: 'Aurum',
     rating : 5,
     ratingCount: 789,
@@ -196,6 +217,7 @@ export const ourProducts = [
     title: 'Kyros Eau De Parfum 100ml for Men',
     price: 980,
     offerPrice: 879,
+    category: 'combo',
     image: [productTen]
   },
   {
@@ -218,23 +240,33 @@ export const ourProducts = [
   },
   {
     id: 'p013',
-    title: 'Kyros Eau De Parfum 100ml for Men',
-    price: 980,
-    offerPrice: 879,
-    image: [productTThirteen]
+    title: 'Pachouli-Haze Perfume 100ml for Men & Women',
+    price: 899,
+    offerPrice: 499,
+    category: 'featured',
+    brand: 'Pachouli-Haze',
+    rating : 4.8,
+    ratingCount: 911,
+    image: [productEightTeen, patchViewOne, patchViewTwo]
   },
   {
     id: 'p014',
-    title: 'Kyros Eau De Parfum 100ml for Men',
-    price: 469,
-    offerPrice: 449,
-    image: [productSixteen]
+    title: 'Ahlam perfume premium 100ml for Men',
+    price: 3000,
+    offerPrice: 1500,
+    category: 'featured',
+    brand: 'Ahlam',
+    rating : 4.8,
+    ratingCount: 911,
+    image: [productSevenTeen, ahlamViewOne, ahlamViewTwo]
   },
   {
     id: 'p015',
-    title: 'Kyros Eau De Parfum 100ml for Men',
-    price: 980,
-    offerPrice: 879,
-    image: [productTFifteen]
+    title: 'Aurum Winter Perfume 75ML for Women',
+    price: 4000,
+    offerPrice: 3200,
+    brand: 'Aurum Winter',
+    rating : 4.8,
+    image: [productNineTeen, aurumViewThree, aurumViewFour]
   },
 ]

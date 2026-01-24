@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 
 const Register = () => {
 
-
-
   return (
    <div className="min-h-screen flex justify-center px-4 py-10">
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-2xl overflow-hidden">
@@ -58,7 +56,7 @@ const Register = () => {
 
           <button className="bg-primary text-white py-4 rounded text-lg font-medium hover:opacity-90 transition cursor-pointer">Sign Up</button>
 
-          <p className="text-center text-base mt-6">Already have an account?<Link to="/register" className="font-semibold cursor-pointer ml-1">
+          <p className="text-center text-base mt-6">Already have an account?<Link to="/login" className="font-semibold cursor-pointer ml-1">
             Sign In
           </Link></p>
         </div>
