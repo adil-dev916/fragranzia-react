@@ -65,6 +65,9 @@ export const AppContextProvider = ({ children }) => {
     return Math.floor(totalAmount * 100) / 100;
   }
 
+  const forgotPass = () => {
+    toast.error("Woking on progress!")
+  }
   // all alert => adding to single function
   const notificationsAll = () => {
 
@@ -74,7 +77,7 @@ export const AppContextProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         products, navigate, user, setUser, showUserLogin, setShowUserLogin, searchQuery, setSearchQuery,
-        cartItems, addToCart, updateCartItem, removeCartItem, getCartCount, getCartAmount
+        cartItems, addToCart, updateCartItem, removeCartItem, getCartCount, getCartAmount, forgotPass
       }}>
       {children}
     </AppContext.Provider>

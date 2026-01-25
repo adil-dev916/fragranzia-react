@@ -36,6 +36,7 @@ const ProductPage = () => {
 
   return (
     <>
+      <title>Fragranzia Products</title>
       <div className='m-5 py-5'>
 
         <div className="ml-4 sm:ml-6 md:ml-9">

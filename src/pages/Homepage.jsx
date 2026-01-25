@@ -9,6 +9,7 @@ import Navbar from '../components/Navbar.jsx'
 const Homepage = () => {
   return (
     <>
+      <title>Fragranzia Home</title>
       <div className='m-5 py-5'>
 
         <MainBanner />
@@ -58,22 +59,22 @@ const Homepage = () => {
 
         <div className='mt-9 flex justify-between'>
           <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-            <img src={assets.productTwo} alt="" className='w-30 h-30'/>
+            <img src={assets.productTwo} alt="" className='w-30 h-30' />
           </div>
           <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-            <img src={assets.productThree} alt="" className='w-30 h-30'/>
+            <img src={assets.productThree} alt="" className='w-30 h-30' />
           </div>
           <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-            <img src={assets.productFour} alt="" className='w-30 h-30'/>
+            <img src={assets.productFour} alt="" className='w-30 h-30' />
           </div>
           <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-            <img src={assets.productFive} alt="" className='w-30 h-30'/>
+            <img src={assets.productFive} alt="" className='w-30 h-30' />
           </div>
           <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-            <img src={assets.productSix} alt="" className='w-30 h-30'/>
+            <img src={assets.productSix} alt="" className='w-30 h-30' />
           </div>
           <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-            <img src={assets.productSixteen} alt="" className='w-30 h-30'/>
+            <img src={assets.productSixteen} alt="" className='w-30 h-30' />
           </div>
         </div>
 

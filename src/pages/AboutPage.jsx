@@ -5,6 +5,7 @@ import { assets } from '../assets/assets'
 const AboutPage = () => {
     return (
         <>
+            <title>Fragranzia About</title>
             <div className='m-5 py-5'>
                 <div className='ml-9'>
                     <h1 className='text-[35px] font-semibold'>About Fragraniza</h1>

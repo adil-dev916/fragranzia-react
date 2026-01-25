@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { assets } from '../assets/assets'
 import { Link } from 'react-router-dom'
+import { AppContext } from '../context/AppContext'
 
 const Login = () => {
+
+  const { forgotPass } = useContext(AppContext)
+
   return (
     <div className="min-h-dvh flex items-center justify-center px-4">
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-2xl overflow-hidden">
@@ -42,7 +46,7 @@ const Login = () => {
             <input type="password" placeholder="Enter your password" className="bg-transparent outline-none w-full" />
           </div>
 
-          <div className="text-right text-sm mb-6 cursor-pointer">Forgot password?</div>
+          <div className="text-right text-sm mb-6 cursor-pointer" onClick={forgotPass}>Forgot password?</div>
 
           <button className="bg-primary text-white py-4 rounded text-lg font-medium hover:opacity-90 transition cursor-pointer">Log In</button>
 
