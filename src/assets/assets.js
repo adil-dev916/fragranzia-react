@@ -25,6 +25,11 @@ import wishFalseIcon from './icons/wishFalseIcon.png'
 import ratingIcon from './icons/ratingIcon.png'
 import offerLabelIcon from './icons/offerLabelIcon.png'
 import editIcon from './icons/editIcon.png'
+import googlepayIcon from './icons/googlepayIcon.png'
+import upiIcon from './icons/upiIcon.svg'
+import netbankingIcon from './icons/netbankingIcon.png'
+import codIcon from './icons/codIcon.png'
+import creditcardIcon from './icons/creditcardIcon.png'
 
 import imageOne from './images/ec25b4b5e08d65f5173c15e1f91cde6f71eb4f06.jpg'
 import imageTwo from './images/9c74020bea95942fe85eb1d5ca6068cd932290d5.jpg'
@@ -103,6 +108,11 @@ export const assets = {
     ratingIcon,
     offerLabelIcon,
     editIcon,
+    googlepayIcon,
+    codIcon,
+    upiIcon,
+    creditcardIcon,
+    netbankingIcon,
     imageOne,
     imageTwo,
     imageThree,
@@ -269,4 +279,14 @@ export const ourProducts = [
     rating : 4.8,
     image: [productNineTeen, aurumViewThree, aurumViewFour]
   },
+]
+
+export const customerFakeData = [
+  {
+    id: 'c78ed31f-4d8b-447e-8985-d1a4e1521754',
+    userName: 'Adil',
+    email: 'adil@gmail.com',
+    phoneNum: 8848017132,
+    address: 'House No. 12/45, Near Sreekrishna Temple, Near Sreekrishna Temple, Ernakulam, Kerala, India'
+  }
 ]
