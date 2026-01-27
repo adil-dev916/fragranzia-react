@@ -3,16 +3,22 @@ import { AppContext } from '../context/AppContext'
 import { Link, useParams } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import ProductCard from '../components/ProductCard'
+import toast from 'react-hot-toast'
 
 const ProductView = () => {
 
-  const { products, navigate, addToCart, updateCartItem, cartItems } = useContext(AppContext)
+  const { products, navigate, addToCart, updateCartItem, cartItems, addToWish, wishItems, setWishItems } = useContext(AppContext)
   const { id } = useParams()
   const [relatedProducts, setRelatedProducts] = useState([])
   const [thumbnail, setThumbnail] = useState(null)
 
   const product = products.find((item) => item.id === id)
   const off = Math.round(((product.price - product.offerPrice) / product.price) * 100)
+
+  const handleWish = (productId) => {
+    addToWish(productId);
+  };
+
 
   useEffect(() => {
     if (products.length > 0) {
@@ -50,17 +56,25 @@ const ProductView = () => {
                   </div>
                 ))}
               </div>
-
-              <div className="border border-gray-500/30 w-[420px] rounded overflow-hidden">
-                <img src={thumbnail} alt="" className="w-full h-full object-cover" />
+              <div>
+                <div className='relative'>
+                  <div className='absolute top-3 right-3 flex flex-col gap-2 z-10'>
+                    <div className='flex rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] justify-center items-center cursor-pointer'>
+                      <img onClick={() => handleWish(product.id)} src={wishItems[product.id] ? assets.wishTrueIcon : assets.wishFalseIcon} alt="" className='w-5 h-5' />
+                    </div>
+                    <div className='flex rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] justify-center items-center cursor-pointer'>
+                      <img src={assets.shareIcon} alt="" className='w-5 h-5' />
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-gray-500/30 w-[420px] rounded overflow-hidden">
+                  <img src={thumbnail} alt="" className="w-full h-full object-cover" />
+                </div>
               </div>
-
             </div>
 
             <div className="flex flex-col gap-3 mt-4 w-full">
-
               <button onClick={() => { navigate(`/products/quick/${product.id}`) }} className="w-full bg-primary text-white py-3 rounded-md font-medium hover:bg-primary-dull transition">Purchase Now</button>
-
               <button onClick={() => addToCart(product.id)} className="w-full border-2 border-primary text-primary py-3 rounded-md font-medium hover:bg-primary hover:text-white transition">Add to Cart</button>
             </div>
           </div>

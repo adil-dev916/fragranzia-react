@@ -13,6 +13,7 @@ import Login from './pages/Login'
 import ProductView from './pages/ProductView'
 import PaymentPage from './pages/PaymentPage'
 import ProfilePage from './pages/profilepages/ProfilePage'
+import GiftingPage from './pages/GiftingPage'
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path='/products/quick/:id' element={<PaymentPage />} />
           <Route path='/products/:id' element={<ProductView/>} />
           <Route path='/about' element={<AboutPage />} />
+          <Route path='/gifting' element={<GiftingPage />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<Login />} />
           {/* profile sectio */}

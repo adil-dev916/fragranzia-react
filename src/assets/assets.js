@@ -30,6 +30,8 @@ import upiIcon from './icons/upiIcon.svg'
 import netbankingIcon from './icons/netbankingIcon.png'
 import codIcon from './icons/codIcon.png'
 import creditcardIcon from './icons/creditcardIcon.png'
+import successIcon from './icons/successIcon.png'
+import errorIcon from './icons/errorIcon.png'
 
 import imageOne from './images/ec25b4b5e08d65f5173c15e1f91cde6f71eb4f06.jpg'
 import imageTwo from './images/9c74020bea95942fe85eb1d5ca6068cd932290d5.jpg'
@@ -113,6 +115,8 @@ export const assets = {
     upiIcon,
     creditcardIcon,
     netbankingIcon,
+    successIcon,
+    errorIcon,
     imageOne,
     imageTwo,
     imageThree,

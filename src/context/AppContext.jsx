@@ -13,6 +13,7 @@ export const AppContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState({});
   const [cartItems, setCartItems] = useState({});
+  const [wishItems, setWishItems] = useState({});
 
   useEffect(() => {
     setProducts(ourProducts);
@@ -48,8 +49,8 @@ export const AppContextProvider = ({ children }) => {
 
   const getCartCount = () => {
     let totalCount = 0;
-    for (const productId  in cartItems) {
-      totalCount += cartItems[productId ];
+    for (const productId in cartItems) {
+      totalCount += cartItems[productId];
     }
     return totalCount;
   }
@@ -68,6 +69,22 @@ export const AppContextProvider = ({ children }) => {
   const forgotPass = () => {
     toast.error("Woking on progress!")
   }
+
+  const addToWish = (itemId) => {
+    setWishItems(prev => {
+      const wishupdated = { ...prev };
+
+      if (wishupdated[itemId]) {
+        delete wishupdated[itemId];
+        toast.success("Removed from wishlist");
+      } else {
+        wishupdated[itemId] = true;
+        toast.success("Added to wishlist");
+      }
+      return wishupdated;
+    });
+  };
+
   // all alert => adding to single function
   const notificationsAll = () => {
 
@@ -77,7 +94,7 @@ export const AppContextProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         products, navigate, user, setUser, showUserLogin, setShowUserLogin, searchQuery, setSearchQuery,
-        cartItems, addToCart, updateCartItem, removeCartItem, getCartCount, getCartAmount, forgotPass
+        cartItems, addToCart, updateCartItem, removeCartItem, getCartCount, getCartAmount, forgotPass, addToWish, wishItems, setWishItems
       }}>
       {children}
     </AppContext.Provider>

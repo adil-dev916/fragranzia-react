@@ -18,13 +18,8 @@ const PaymentPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6 items-start">
                 <div className="lg:col-span-2 flex flex-col gap-6">
 
-                    {/* PRODUCT BOX */}
                     <div className="shadow-[0_0_3px_#24242453] rounded-lg p-4 flex gap-4">
-                        <img
-                            src={product.image[0]}
-                            className="w-24 h-24 object-contain"
-                            alt=""
-                        />
+                        <img src={product.image[0]} className="w-24 h-24 object-contain" alt=""/>
 
                         <div className="flex-1">
                             <h3 className="font-medium">{product.title}</h3>
