@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import MainBanner from '../components/MainBanner.jsx'
 import BrandBanner from '../components/BrandBanner.jsx'
 import FastService from '../components/FastService.jsx'
 import { assets } from '../assets/assets.js'
 import FeaturedCard from '../components/FeaturedCard.jsx'
 import Navbar from '../components/Navbar.jsx'
+import { AppContext } from '../context/AppContext.jsx'
 
 const Homepage = () => {
+
+  const { products } = useContext(AppContext)
+  const [featured, setFeatured] = useState([])
+  const [offerZone, setOfferZone] = useState([])
+
+  // const offerZoneList = () => {
+
+  // }
+
+  useEffect(() => {
+    setFeatured(products)
+
+    const offerbase = [...featured].sort(
+      (a, b) => a.offerPrice - b.offerPrice
+    )
+    setOfferZone(offerbase)
+  }, [products])
+
   return (
     <>
       <title>Fragranzia Home</title>
@@ -28,7 +47,14 @@ const Homepage = () => {
             </button>
           </div>
         </div>
-        {/* <FeaturedCard /> */}
+
+        <div className='flex justify-center'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:gap-3 sm:p-3 md:gap-5 md:p-5 lg:gap-6 lg:p-6'>
+            {featured.slice(0, 5).map(product => (
+              <FeaturedCard key={product.id} product={product} />
+            ))}
+          </div>
+        </div>
 
         <div className='flex justify-center items-center mt-4 text-center lg:text-2xl md:text-[20px] sm:text-sm'>
           <div className='max-w-md px-4'>
@@ -57,27 +83,49 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className='mt-9 flex justify-between'>
-          <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-            <img src={assets.productTwo} alt="" className='w-30 h-30' />
-          </div>
-          <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-            <img src={assets.productThree} alt="" className='w-30 h-30' />
-          </div>
-          <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-            <img src={assets.productFour} alt="" className='w-30 h-30' />
-          </div>
-          <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-            <img src={assets.productFive} alt="" className='w-30 h-30' />
-          </div>
-          <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-            <img src={assets.productSix} alt="" className='w-30 h-30' />
-          </div>
-          <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-            <img src={assets.productSixteen} alt="" className='w-30 h-30' />
+        <div className='flex justify-center'>
+          <div className='mt-9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 p-4'>
+            <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+              <img src={assets.productTwo} alt="" className='w-30 h-30' />
+            </div>
+            <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+              <img src={assets.productThree} alt="" className='w-30 h-30' />
+            </div>
+            <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+              <img src={assets.productFour} alt="" className='w-30 h-30' />
+            </div>
+            <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+              <img src={assets.productFive} alt="" className='w-30 h-30' />
+            </div>
+            <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+              <img src={assets.productSix} alt="" className='w-30 h-30' />
+            </div>
+            <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+              <img src={assets.productSixteen} alt="" className='w-30 h-30' />
+            </div>
           </div>
         </div>
 
+        <div className='mt-23 flex justify-between items-center'>
+          <h1 className='sm:text-[20px] md:text-[25px] lg:text-[35px] font-semibold'>Offers<span> Zone</span></h1>
+
+          <div className='flex gap-2'>
+            <button className='flex justify-center items-center rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] hover:bg-gray-100'>
+              <img src={assets.leftArrowIcon} alt="" className='w-5 h-5' />
+            </button>
+            <button className='flex justify-center items-center rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] hover:bg-gray-100'>
+              <img src={assets.rightArrowIcon} alt="" className='w-5 h-5' />
+            </button>
+          </div>
+        </div>
+
+        <div className='flex justify-center'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:gap-3 sm:p-3 md:gap-5 md:p-5 lg:gap-6 lg:p-6'>
+            {offerZone.slice(0, 5).map(product => (
+              <FeaturedCard key={product.id} product={product} />
+            ))}
+          </div>
+        </div>
       </div>
     </>
   )
