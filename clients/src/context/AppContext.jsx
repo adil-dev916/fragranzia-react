@@ -67,7 +67,7 @@ export const AppContextProvider = ({ children }) => {
   }
 
   const forgotPass = () => {
-    toast.error("Woking on progress!")
+    toast.error("Working on progress!")
   }
 
   const addToWish = (itemId) => {

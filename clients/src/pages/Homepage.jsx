@@ -4,7 +4,6 @@ import BrandBanner from '../components/BrandBanner.jsx'
 import FastService from '../components/FastService.jsx'
 import { assets } from '../assets/assets.js'
 import FeaturedCard from '../components/FeaturedCard.jsx'
-import Navbar from '../components/Navbar.jsx'
 import { AppContext } from '../context/AppContext.jsx'
 
 const Homepage = () => {
@@ -13,18 +12,16 @@ const Homepage = () => {
   const [featured, setFeatured] = useState([])
   const [offerZone, setOfferZone] = useState([])
 
-  // const offerZoneList = () => {
-
-  // }
-
   useEffect(() => {
     setFeatured(products)
 
-    const offerbase = [...featured].sort(
+    const offerbase = [...products].sort(
       (a, b) => a.offerPrice - b.offerPrice
     )
     setOfferZone(offerbase)
+
   }, [products])
+
 
   return (
     <>
@@ -50,7 +47,7 @@ const Homepage = () => {
 
         <div className='flex justify-center'>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:gap-3 sm:p-3 md:gap-5 md:p-5 lg:gap-6 lg:p-6'>
-            {featured.slice(0, 5).map(product => (
+            {featured.slice(1, 6).map(product => (
               <FeaturedCard key={product.id} product={product} />
             ))}
           </div>
@@ -83,25 +80,26 @@ const Homepage = () => {
           </div>
         </div>
 
+        {/* Categories section */}
         <div className='flex justify-center'>
           <div className='mt-9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 p-4'>
-            <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-              <img src={assets.productTwo} alt="" className='w-30 h-30' />
+            <div className='flex justify-center items-center w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+              <img src={assets.productTwo} alt="" className='w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-30 lg:h-30' />
             </div>
-            <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-              <img src={assets.productThree} alt="" className='w-30 h-30' />
+            <div className='flex justify-center items-center w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+              <img src={assets.productThree} alt="" className='w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-30 lg:h-30' />
             </div>
-            <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-              <img src={assets.productFour} alt="" className='w-30 h-30' />
+            <div className='flex justify-center items-center w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+              <img src={assets.productFour} alt="" className='w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-30 lg:h-30' />
             </div>
-            <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-              <img src={assets.productFive} alt="" className='w-30 h-30' />
+            <div className='flex justify-center items-center w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+              <img src={assets.productFive} alt="" className='w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-30 lg:h-30' />
             </div>
-            <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-              <img src={assets.productSix} alt="" className='w-30 h-30' />
+            <div className='flex justify-center items-center w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+              <img src={assets.productSix} alt="" className='w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-30 lg:h-30' />
             </div>
-            <div className='flex justify-center items-center w-40 h-40 rounded-full shadow-[0_0_3px_#24242453]'>
-              <img src={assets.productSixteen} alt="" className='w-30 h-30' />
+            <div className='flex justify-center items-center w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full shadow-[0_0_3px_#24242453]'>
+              <img src={assets.productSixteen} alt="" className='w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-30 lg:h-30' />
             </div>
           </div>
         </div>

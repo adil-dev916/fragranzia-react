@@ -19,7 +19,6 @@ const ProductView = () => {
     addToWish(productId);
   };
 
-
   useEffect(() => {
     if (products.length > 0) {
       let productsCopy = products.slice()
