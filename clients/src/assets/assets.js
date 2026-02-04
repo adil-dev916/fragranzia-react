@@ -32,6 +32,15 @@ import codIcon from './icons/codIcon.png'
 import creditcardIcon from './icons/creditcardIcon.png'
 import successIcon from './icons/successIcon.png'
 import errorIcon from './icons/errorIcon.png'
+import adminIcon from './icons/adminIcon.png'
+import homeIcon from './icons/homeIcon.png'
+import addressIcon from './icons/addressIcon.png'
+import orderHistoryIcon from './icons/orderHistoryIcon.png'
+import dashboardIcon from './icons/dashboardIcon.png'
+import productsIcon from './icons/productsIcon.png'
+import ordersIcon from './icons/ordersIcon.png'
+import customersIcon from './icons/customersIcon.png'
+import categoriesIcon from './icons/categoriesIcon.png'
 
 import imageOne from './images/ec25b4b5e08d65f5173c15e1f91cde6f71eb4f06.jpg'
 import imageTwo from './images/9c74020bea95942fe85eb1d5ca6068cd932290d5.jpg'
@@ -58,6 +67,7 @@ import productSixteen from './products/eca718a09edd838874403cb7193d84d2765e110f.
 import productSevenTeen from './products/productSevenTeen.webp'
 import productEightTeen from './products/productEightTeen.webp'
 import productNineTeen from './products/productNineTeen.webp'
+import productTwenteen from './products/productTwenteen.jpg'
 
 // product view
 import productViewOne from './products/84ff52be920903cb0f5100ecea6927d9bd38f277.jpg'
@@ -117,6 +127,15 @@ export const assets = {
     netbankingIcon,
     successIcon,
     errorIcon,
+    adminIcon,
+    homeIcon,
+    addressIcon,
+    orderHistoryIcon,
+    dashboardIcon,
+    ordersIcon,
+    productsIcon,
+    customersIcon,
+    categoriesIcon,
     imageOne,
     imageTwo,
     imageThree,
@@ -131,6 +150,7 @@ export const assets = {
     productTFourteen,
     productTFifteen,
     productSixteen,
+    productTwenteen,
 }
 
 export const ourProducts = [
@@ -143,6 +163,7 @@ export const ourProducts = [
     brand: 'Autograph',
     rating : 4.5,
     ratingCount: 1000,
+    stock: 10,
     image: [productOne, productViewOne, productViewTwo],
   },
   {
@@ -291,6 +312,7 @@ export const customerFakeData = [
     userName: 'Adil',
     email: 'adil@gmail.com',
     phoneNum: 8848017132,
-    address: 'House No. 12/45, Near Sreekrishna Temple, Near Sreekrishna Temple, Ernakulam, Kerala, India'
-  }
+    address: 'House No. 12/45, Near Sreekrishna Temple, Near Sreekrishna Temple, Ernakulam, Kerala, India',
+    banStatus: false
+  },
 ]

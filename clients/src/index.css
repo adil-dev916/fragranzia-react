@@ -106,3 +106,7 @@
     flex: none;
   }
 }
+
+.homeBottomBanner {
+  background: linear-gradient(to right, #D0F7FB, #C4F1FA, #B3EDF8);
+}

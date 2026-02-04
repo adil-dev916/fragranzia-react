@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { ourProducts } from "../assets/assets";
+import { customerFakeData, ourProducts } from "../assets/assets";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
@@ -9,17 +9,21 @@ export const AppContextProvider = ({ children }) => {
 
   const navigate = useNavigate();
   const [user, setUser] = useState(false)
+  const [admin, setAdmin] = useState(true)
   const [showUserLogin, setShowUserLogin] = useState(false)
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState({});
   const [cartItems, setCartItems] = useState({});
   const [wishItems, setWishItems] = useState({});
+  const [allUsers, setAllUsers] = useState([])
 
   useEffect(() => {
     setProducts(ourProducts);
     setSearchQuery(ourProducts);
+    setAllUsers(customerFakeData)
   }, []);
 
+  // product add to cart
   const addToCart = (itemId) => {
     setCartItems(prev => {
       const updated = { ...prev };
@@ -93,8 +97,9 @@ export const AppContextProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
-        products, navigate, user, setUser, showUserLogin, setShowUserLogin, searchQuery, setSearchQuery,
-        cartItems, addToCart, updateCartItem, removeCartItem, getCartCount, getCartAmount, forgotPass, addToWish, wishItems, setWishItems
+        products, navigate, user, setUser, admin, setAdmin, showUserLogin, setShowUserLogin, searchQuery, setSearchQuery,
+        cartItems, addToCart, updateCartItem, removeCartItem, getCartCount, getCartAmount, forgotPass, addToWish, wishItems, setWishItems,
+        allUsers
       }}>
       {children}
     </AppContext.Provider>

@@ -3,7 +3,7 @@ import { assets } from "../assets/assets"
 export const SuccessStatus = () => {
     return (
         <>
-            <div>
+            <div className="w-full z-50 ">
                 <div className="flex flex-col justify-center items-center lg:w-2/4 p-6 text-center mx-auto gap-4">
                     <img src={assets.successIcon} alt="" className="w-28 h-28" />
                     <h3 className="font-medium">Thank You for Ordering!</h3>

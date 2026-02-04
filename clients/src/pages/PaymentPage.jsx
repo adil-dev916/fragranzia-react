@@ -19,7 +19,7 @@ const PaymentPage = () => {
                 <div className="lg:col-span-2 flex flex-col gap-6">
 
                     <div className="shadow-[0_0_3px_#24242453] rounded-lg p-4 flex gap-4">
-                        <img src={product.image[0]} className="w-24 h-24 object-contain" alt=""/>
+                        <img src={product.image[0]} className="w-24 h-24 object-contain" alt="" />
 
                         <div className="flex-1">
                             <h3 className="font-medium">{product.title}</h3>
@@ -127,6 +127,9 @@ const PaymentPage = () => {
                                 <p>Net Banking</p>
                             </div>
                             <input type="checkbox" className='w-4 h-4 rounded-full appearance-none border border-black checked:bg-primary' />
+                        </div>
+                        <div className='flex justify-center mt-3'>
+                            <button className='w-full cursor-pointer mt-3 p-2 text-white bg-primary rounded-sm hover:bg-primary-dull transition'>Pay Now</button>
                         </div>
 
                     </div>

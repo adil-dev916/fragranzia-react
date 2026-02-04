@@ -5,11 +5,12 @@ import { AppContext } from '../context/AppContext'
 
 const Navbar = () => {
 
-    const { navigate, user, setUser, setShowUserLogin, searchQuery, setSearchQuery, getCartCount } = useContext(AppContext);
+    const { navigate, user, setUser, admin, setAdmin, setShowUserLogin, searchQuery, setSearchQuery, getCartCount } = useContext(AppContext);
     const [open, setOpen] = useState(false)
     const [profile, setProfile] = useState(false)
     const logout = async () => {
         setUser(null);
+        setAdmin(null)
         navigate('/')
     }
 
@@ -20,7 +21,7 @@ const Navbar = () => {
     // }, [searchQuery])
 
     return (
-        <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
+        <nav className="z-50 flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
 
             <NavLink to='/'>
                 <h3 className='text-[#00354B] font-rethink font-bold text-2xl'>Fragranzia</h3>
@@ -56,7 +57,9 @@ const Navbar = () => {
                         )}
                     </div>
                     <div className='flex rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] justify-center items-center cursor-pointer'>
-                        <img src={assets.bellIcon} alt="" className='w-5 h-5' />
+                        <Link to='/wishlist'>
+                            <img src={assets.wishFalseIcon} alt="" className='w-5 h-5' />
+                        </Link>
                     </div>
                     <div className="relative">
                         <div onClick={() => setProfile(!profile)} className="flex w-[30px] h-[30px] items-center justify-center rounded-full shadow-[0_0_3px_#24242453] cursor-pointer">
@@ -75,6 +78,23 @@ const Navbar = () => {
                             </div>
                         )}
                     </div>
+                    {/* <div className='flex rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] justify-center items-center cursor-pointer'>
+                        {
+                            !admin ? (
+                                null
+                            ) : <Link to='/admin-dashboard'>
+                                <img src={assets.adminIcon} alt="" className='w-5 h-5' />
+                            </Link>
+                        }
+                    </div> */}
+                    {!admin ? (
+                        null
+                    ) : <div className='flex rounded-full shadow-[0_0_3px_#24242453] w-[30px] h-[30px] justify-center items-center cursor-pointer'>
+                        <Link to='/admin-dashboard'>
+                                <img src={assets.adminIcon} alt="" className='w-5 h-5' />
+                            </Link>
+                    </div>
+                    }
                 </div>
             </div>
 
@@ -97,12 +117,10 @@ const Navbar = () => {
                     }
                     <Link to='/gifting' className='block'>Gifting</Link>
                     <Link to='/about' className='block'>About</Link>
+                    <Link to='/profile'>Profile</Link>
 
                     {!user ? (
-                        <button onClick={() => {
-                            setOpen(false);
-                            setShowUserLogin(true);
-                        }} className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm">
+                        <button onClick={() => { setOpen(false); setShowUserLogin(true); }} className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm">
                             Login
                         </button>
                     ) : (

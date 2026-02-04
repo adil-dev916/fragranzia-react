@@ -1,42 +1,61 @@
-import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Register from './pages/Register'
-import Navbar from './components/Navbar'
 import Homepage from './pages/Homepage'
-import Banner from './components/Banner'
 import ProductPage from './pages/ProductPage'
 import { Toaster } from 'react-hot-toast'
 import AboutPage from './pages/AboutPage'
-import Footer from './components/Footer'
 import Cart from './pages/Cart'
 import Login from './pages/Login'
 import ProductView from './pages/ProductView'
 import PaymentPage from './pages/PaymentPage'
 import ProfilePage from './pages/profilepages/ProfilePage'
 import GiftingPage from './pages/GiftingPage'
+import Layouts from './layouts/Layouts'
+import OrdersHistory from './pages/profilepages/OrdersHistory'
+import ProfileLayouts from './layouts/ProfileLayouts'
+import WishlistPage from './pages/profilepages/WishlistPage'
+import AddressPage from './pages/profilepages/AddressPage'
+
+import AdminLayouts from './layouts/AdminLayouts'
+import AdminDashboard from './pages/adminpages/AdminDashboard'
+import AdminProducts from './pages/adminpages/AdminProducts'
+import AdminCategories from './pages/adminpages/AdminCategories'
+import AdminCustomers from './pages/adminpages/AdminCustomers'
+import AdminOrdersPage from './pages/adminpages/AdminOrdersPage'
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Banner />
       <Toaster position="top-center" reverseOrder={false} />
-      <div className='px-6 md:px-16 lg:px-20 xl:px-32'>
-        <Routes>
+      <Routes>
+        <Route element={<Layouts />}>
           <Route path="/" element={<Homepage />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/products" element={<ProductPage />} />
           <Route path='/products/quick/:id' element={<PaymentPage />} />
           <Route path='/products/:id' element={<ProductView />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='/gifting' element={<GiftingPage />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='/login' element={<Login />} />
-          {/* profile sectio */}
+        </Route>
+
+        <Route element={<ProfileLayouts />}>
           <Route path='/profile' element={<ProfilePage />} />
-        </Routes>
-      </div>
-      <Footer />
+          <Route path='/orders-history' element={<OrdersHistory />} />
+          <Route path='/address' element={<AddressPage />} />
+          <Route path='/wishlist' element={<WishlistPage />} />
+        </Route>
+
+        <Route element={<AdminLayouts />}>
+          <Route path='/admin-dashboard' element={<AdminDashboard />} />
+          <Route path='/admin-products' element={<AdminProducts />} />
+          <Route path='/admin-categories' element={<AdminCategories />} />
+          <Route path='/admin-customers' element={<AdminCustomers />} />
+          <Route path='/admin-orders' element={<AdminOrdersPage />} />
+        </Route>
+
+        <Route path='/login' element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     </>
   )
 }

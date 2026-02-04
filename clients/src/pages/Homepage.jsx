@@ -75,7 +75,7 @@ const Homepage = () => {
         <div className='mt-23 flex justify-between items-center'>
           <h1 className='sm:text-[20px] md:text-[25px] lg:text-[35px] font-semibold'>Explore<span> Categories</span></h1>
 
-          <div className='flex gap-2'>
+          <div classNamfe='flex gap-2'>
             <p className='text-decoration-line: underline'>See All</p>
           </div>
         </div>
@@ -122,6 +122,17 @@ const Homepage = () => {
             {offerZone.slice(0, 5).map(product => (
               <FeaturedCard key={product.id} product={product} />
             ))}
+          </div>
+        </div>
+
+        <div className='homeBottomBanner mt-23 flex items-center justify-between w-full lg:h-[264px] rounded-2xl overflow-hidden p-3'>
+          <div className='flex flex-col p-5'>
+            <h2 className="md:text-4xl text-2xl font-bold">Elegance in Every Bottle</h2>
+            <p>Dicover timeless fragrances crafted for every moment</p>
+            <button className="w-1/3 cursor-pointer mt-3 p-2 text-white bg-primary rounded-sm hover:bg-primary-dull transition">Shop Now</button>
+          </div>
+          <div>
+            <img src={assets.productTwenteen} alt="" className='w-[370px] rotate-25' />
           </div>
         </div>
       </div>
